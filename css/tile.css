@@ -1,0 +1,74 @@
+.part-two {
+  max-width: 2600px;
+  margin: 0 auto;
+}
+.tile {
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  width: 50%;
+  max-width: 1300px;
+  height: 380px;
+}
+
+.tile p {
+  color: white;
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+.tile.test, .tile.app {
+  background: #14143c;
+}
+
+.tile.test .button {
+  -ms-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background: transparent;
+  padding: 15px 40px;
+  border: solid white 2px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 11pt;
+  margin-top: 10px;
+}
+.tile.test .button:hover {
+  background: white;
+  color: #6a7a90;
+}
+
+.tile.app .container {
+  margin-top: 30px;
+}
+.tile.test .center,
+.tile.app .center {
+  margin-top: 80px;
+}
+
+.tile.test .icon-chip {
+  margin: 0 auto;
+  width: 80px;
+  height: 80px;
+  background-image: url(../images/icon_gamble.png);
+  background-size: 100%;
+}
+
+.tile.app .icon-phone {
+  margin: 0 auto;
+  width: 45.5px;
+  height: 80.5px;
+  background-image: url(../images/icon_phone.png);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+}
+
+.tile.poker {
+  background-image: url(../images/image_gamble.jpg);
+  background-position: 90% 50%
+}
+
+.tile.smartphone {
+  background-image: url(../images/image_app.jpg);
+  background-position: 80% 50%
+}
