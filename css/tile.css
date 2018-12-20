@@ -72,3 +72,8 @@
   background-image: url(../images/image_app.jpg);
   background-position: 80% 50%
 }
+
+.tile.rofus {
+  background-image: url(../images/rofus.jpg);
+  background-position: 90% 50%
+}
