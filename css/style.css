@@ -44,7 +44,8 @@ p {
 p,
 .container,
 .footer,
-.button {
+.button,
+a {
   font-family: 'Open Sans', sans-serif;
 }
 .button {
@@ -71,7 +72,11 @@ a.button:visited {
 .orange-button:hover {
   background: #ffc020;
 }
-
+a.phone{
+  text-decoration: none;
+  font-size: 70px;
+  font-weight: bold;
+}
 .crown {
   width: 46.5px;
   height: 43px;
