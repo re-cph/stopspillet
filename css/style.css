@@ -77,12 +77,19 @@ a.phone{
   font-size: 50px;
   font-weight: bold;
 }
-.crown {
+.crown{
   width: 46.5px;
   height: 43px;
   background-image: url(../images/icon_crown.png);
   background-size: 46.5px 43px;
 }
+.logo{
+  background-image: url(../images/StopSpilletLogo.png);
+  width: 320px;
+  height: 166.5px;
+  background-size: 320px 166.6px;
+}
+
 #news .crown,
 .part-three .crown {
   position: relative;
