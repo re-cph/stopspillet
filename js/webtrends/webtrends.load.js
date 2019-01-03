@@ -4,10 +4,10 @@
 // Created: 2018.06.28
 window.webtrendsAsyncInit=function(){
     var dcs=new Webtrends.dcs().init({
-        dcsid:"dcs222a7vz1xbblhc1uujwjif_9p5w",
+        dcsid:"",
         domain:"statse.webtrendslive.com",
         timezone:1,
-        fpcdom:".rofus.nu",
+        fpcdom:".stopspillet.dk",
         plugins:{
         }
         }).track();
