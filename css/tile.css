@@ -9,11 +9,15 @@
   max-width: 1300px;
   height: 380px;
 }
-
 .tile p {
+  color: white;
+  margin: 0 20px;
+}
+.tile p.big {
   color: white;
   font-size: 16pt;
   font-weight: bold;
+  margin: 20px 0 10px 0;
 }
 
 .tile.test, .tile.app {
