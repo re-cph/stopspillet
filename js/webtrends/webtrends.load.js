@@ -4,7 +4,7 @@
 // Created: 2018.06.28
 window.webtrendsAsyncInit=function(){
     var dcs=new Webtrends.dcs().init({
-        dcsid:"",
+        dcsid:"dcs222caqjg9rc95bc6xy7l0o_5n2y",
         domain:"statse.webtrendslive.com",
         timezone:1,
         fpcdom:".stopspillet.dk",
