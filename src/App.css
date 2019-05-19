@@ -1,3 +1,8 @@
+.divider {
+  height: 20vmin;
+  width: 20vmin;
+}
+
 .App {
   text-align: center;
 }
