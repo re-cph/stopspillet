@@ -1,4 +1,4 @@
-export default [
+export const data = [
     {question: "Do often want to connect and communicate to new people?"},
     {question: "Do you have accounts on popular Social media platforms?"},
     {question: "Is Facebook your favourite Social platform?"},
