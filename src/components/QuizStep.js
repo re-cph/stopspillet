@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import {Grid, Header, Segment, Container } from 'semantic-ui-react'
 import QuizQuestion from './QuizQuestion'
 import QuizResult from './QuizResult'
+import StepBullet from './StepBullet'
 import { QuizContext } from '../QuizProvider'
 
 class QuizStep extends Component {
@@ -21,11 +22,14 @@ class QuizStep extends Component {
                                 <Grid.Column>
                                 <Header as='h1'>Test Yourself</Header>
                                 <Header as='h3'>Answer 9 questions and get better understanding
-                                        of how much you could benefit from our product</Header>
+                                        of how much you could benefit from our product.</Header>
     
                                 </Grid.Column>
     
                                 <Grid.Column>
+                                    <div style={styles.stepBullet}>
+                                        <StepBullet />
+                                    </div>
                                     
                                     {
                                         /* if current step equals 9, we're done with quiz, show results 
@@ -49,3 +53,12 @@ class QuizStep extends Component {
 }
 
 export default QuizStep
+
+const styles = {
+    stepBullet: {
+        width: 30,
+        height: 10,
+        display: 'flex',
+        marginRight: 10,
+    }
+}
