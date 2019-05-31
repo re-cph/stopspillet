@@ -17,28 +17,29 @@ class QuizStep extends Component {
                     <Container style={{marginTop: '50px'}}>
                     <Segment placeholder>
                         <Grid columns={2} stackable textAlign='left'>
-                        
+
                             <Grid.Row >
                                 <Grid.Column>
-                                <Header as='h1'>Test Yourself</Header>
-                                <Header as='h3'>Answer 9 questions and get better understanding
-                                        of how much you could benefit from our product.</Header>
-    
+                                <Header as='h1'>TEST DIG SELV</Header>
+                                <Header as='h3'>
+                                  Har du et problematisk forhold til spil? Tag en test med 9 spørgsmål om dine spilvaner.
+                                </Header>
+
                                 </Grid.Column>
-    
+
                                 <Grid.Column>
                                     <div style={styles.stepBullet}>
                                         <StepBullet />
                                     </div>
-                                    
+
                                     {
-                                        /* if current step equals 9, we're done with quiz, show results 
+                                        /* if current step equals 9, we're done with quiz, show results
                                         else, show quiz questions
                                         */
                                     }
-    
-                                    {context.state.currentStep === 9 ? 
-                                    <QuizResult /> : <QuizQuestion /> 
+
+                                    {context.state.currentStep === 9 ?
+                                    <QuizResult /> : <QuizQuestion />
                                     }
                                 </Grid.Column>
                             </Grid.Row>
@@ -47,7 +48,7 @@ class QuizStep extends Component {
                 </Container>
             )}
         </QuizContext.Consumer>
-        
+
     )
   }
 }

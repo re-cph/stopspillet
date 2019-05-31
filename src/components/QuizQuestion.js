@@ -7,34 +7,34 @@ export default function QuizQuestion() {
       <QuizContext.Consumer>
           { context => (
               <Segment placeholder>
-                
+
               <h1>
                   {`${context.state.currentStep +1}.`}
               </h1>
-              
+
               <div style={styles.questionText}>
                   <h3>
                       {context.data[context.state.currentStep].question}
                   </h3>
               </div>
-              
+
               <Segment.Inline>
-                  <Button content='Go back' icon='left arrow' labelPosition='left' onClick={context.goBack} />
-                  <Button negative onClick={() => context.handleStep(false)}>No</Button>
-                  <Button positive onClick={() => context.handleStep(true)}>Yes</Button>
+                  <Button content='Tilbage' icon='left arrow' labelPosition='left' onClick={context.goBack} />
+                  <Button negative onClick={() => context.handleStep(false)}>Nej</Button>
+                  <Button positive onClick={() => context.handleStep(true)}>Ja</Button>
               </Segment.Inline>
           </Segment>
           )}
       </QuizContext.Consumer>
-  
 
-        
+
+
   )
 }
 
 const styles = {
     questionText: {
-        height: 100, 
+        height: 100,
         width: 350,
 
     }
