@@ -1,0 +1,27 @@
+.footer {
+  display: inline-flex;
+  text-align: center;
+  width: 100%;
+  min-height: 150px;
+  margin-top: 150px;
+  background-color: #5d6673;
+}
+
+.footer p {
+  display: inline-block;
+  padding-top: 64px;
+  color: white;
+}
+
+.footer .dot {
+  width: 50px;
+}
+
+.footer a {
+  color: white;
+  text-decoration: underline;
+}
+.footer a:hover {
+  color: white;
+  text-decoration: none;
+}
