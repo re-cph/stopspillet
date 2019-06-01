@@ -1,6 +1,5 @@
 import React from 'react'
-import { Button, Segment } from 'semantic-ui-react'
-import { QuizContext } from '../QuizProvider'
+import {QuizContext} from '../QuizProvider'
 
 function resultSelector (count) {
   switch (count) {
@@ -16,39 +15,24 @@ function resultSelector (count) {
   }
 }
 
-export default function QuizResult() {
-
+export default function QuizResult () {
   return (
     <QuizContext.Consumer>
-      { context => (
-          <Segment placeholder>
+      {(context) => (
+        <section>
+          <h1>Resultat</h1>
 
-                <h1>Resultat</h1>
-            <div>
-              <h3>
-                {resultSelector(context.state.quiz.filter(val => val === true).length)}
-              </h3>
-            </div>
+          <h3>
+            {resultSelector(context.state.quiz.filter(val => val === true).length)}
+          </h3>
 
-          <Segment.Inline>
-          <div style={styles.tryAgainButton}>
-              <Button onClick={context.resetState}>
-                Prøv igen!
-              </Button>
-          </div>
-          </Segment.Inline>
-      </Segment>
+          <section>
+            <button onClick={context.resetState}>
+              Prøv igen!
+            </button>
+          </section>
+        </section>
       )}
     </QuizContext.Consumer>
-
   )
-}
-
-
-const styles = {
-  tryAgainButton: {
-    alignContent: 'left',
-    paddingTop: 30
-
-  }
 }
