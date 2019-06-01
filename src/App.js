@@ -4,14 +4,12 @@ import QuizProvider from './QuizProvider'
 
 
 class App extends Component {
-  
+
   render() {
-   
+
     return (
       <QuizProvider>
-        <div>
-          <QuizContainer />
-        </div>
+        <QuizContainer />
       </QuizProvider>
     )
   }

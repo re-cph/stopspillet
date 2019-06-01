@@ -19,19 +19,20 @@ export default function QuizResult () {
   return (
     <QuizContext.Consumer>
       {(context) => (
-        <section>
-          <h1>Resultat</h1>
+        <React.Fragment>
+          <section className='quiz-content-header'>
+            <h1>Resultat</h1>
+            <p>
+              {resultSelector(context.state.quiz.filter(val => val === true).length)}
+            </p>
+          </section>
 
-          <h3>
-            {resultSelector(context.state.quiz.filter(val => val === true).length)}
-          </h3>
-
-          <section>
-            <button onClick={context.resetState}>
+          <section className='quiz-content-footer'>
+            <button className='quiz-button quiz-button-reset' onClick={context.resetState}>
               Prøv igen!
             </button>
           </section>
-        </section>
+        </React.Fragment>
       )}
     </QuizContext.Consumer>
   )
