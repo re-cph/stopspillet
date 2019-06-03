@@ -1,0 +1,131 @@
+@media(max-width: 1019px) {
+  h2 br,
+  .hide-mobile {
+    display: none;
+  }
+  .header .container,
+  .wrapper,
+  .faq {
+    width: 600px;
+  }
+  .header,
+  .part-two,
+  .part-two .tile {
+    width: 100%;
+  }
+  hr {
+    display: none;
+  }
+}
+@media(max-width: 1019px) and (min-width: 660px) {
+  .faq .faq-item {
+    width: 280px;
+  }
+}
+@media(max-width: 659px) {
+  .fl, .fr {
+    float: none;
+  }
+  p {
+    line-height: 28px !important;
+  }
+  /* KITCHEN SINK */
+  .header .container,
+  .wrapper,
+  .faq {
+    width: 100%;
+    padding: 0px 20px;
+    box-sizing: border-box;
+  }
+  /* HEADER */
+  .header .container h1 {
+    line-height: 1em;
+    margin: 10px 0;
+  }
+  .header .container h1,
+  .header .container p,
+  .header .container ul {
+    width: 100%;
+  }
+  #video-button {
+    padding-top: 32px;
+    padding-left: 0;
+    text-align: center;
+  }
+  .semi-center {
+    text-align: center;
+  }
+  /* FAQ */
+  .faq {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .faq .faq-item {
+    width: inherit;
+    margin-bottom: 40px;
+  }
+  /* NEWS */
+  #news-bg,
+  .faq .faq-item:last-of-type {
+    /*padding-bottom: 0;*/
+  }
+  /* TILES */
+  .tile.test .center,
+  .tile.app .center {
+    margin-top: 0px;
+    position: relative;
+    top: 80px;
+  }
+}
+@media(min-width: 660px) {
+  .hide-desktop {
+    display: none;
+  }
+}
+@media(max-width: 499px) {
+  .header .container ul li {
+    line-height: 1.75em !important;
+  }
+  /* TILE */
+  .tile.poker {
+    background-position: 72% 50% !important;
+  }
+  .tile.smartphone {
+    background-position: 74% 50% !important;
+  }
+}
+@media(max-width: 499px) and (min-width: 375px) {
+  .footer {
+    margin-top: 100px !important;
+  }
+}
+@media(max-width: 374px) {
+  .orange-button {
+    font-size: 10pt !important;
+    padding: 15px 25px;
+  }
+  .footer {
+    margin-top: 80px !important;
+  }
+}
+@media(max-width: 659px) {
+}
+
+/* SPECIAL FOR FOOTER */
+@media(max-width: 1019px) {
+  .hide-dot {
+    display: none;
+  }
+  .subdot {
+    float: none;
+  }
+  .footer p {
+    padding-top: 22px;
+    line-height: 28px !important;
+  }
+}
+@media(min-width: 1020px) {
+  .hide-br {
+    display: none;
+  }
+}
