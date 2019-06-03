@@ -42,6 +42,9 @@
   }
 }
 
+.quiz-question p{
+  min-height: 52px;
+}
 
 .quiz-content-header {
   grid-column: 1;
