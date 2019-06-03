@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/stopspillet-quiz/static/js/main.d18a01c4.chunk.js",
-    "main.js.map": "/stopspillet-quiz/static/js/main.d18a01c4.chunk.js.map",
-    "runtime~main.js": "/stopspillet-quiz/static/js/runtime~main.cf560fc9.js",
-    "runtime~main.js.map": "/stopspillet-quiz/static/js/runtime~main.cf560fc9.js.map",
-    "static/js/2.c3b8c76b.chunk.js": "/stopspillet-quiz/static/js/2.c3b8c76b.chunk.js",
-    "static/js/2.c3b8c76b.chunk.js.map": "/stopspillet-quiz/static/js/2.c3b8c76b.chunk.js.map",
-    "index.html": "/stopspillet-quiz/index.html",
-    "precache-manifest.b4b8ec6b2b7e5e4d5678cd29b3d00bb1.js": "/stopspillet-quiz/precache-manifest.b4b8ec6b2b7e5e4d5678cd29b3d00bb1.js",
-    "service-worker.js": "/stopspillet-quiz/service-worker.js"
+    "main.js": "/static/js/main.d18a01c4.chunk.js",
+    "main.js.map": "/static/js/main.d18a01c4.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.c3b8c76b.chunk.js": "/static/js/2.c3b8c76b.chunk.js",
+    "static/js/2.c3b8c76b.chunk.js.map": "/static/js/2.c3b8c76b.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.16a421292299b2d3154c0e6ded79de37.js": "/precache-manifest.16a421292299b2d3154c0e6ded79de37.js",
+    "service-worker.js": "/service-worker.js"
   }
 }
