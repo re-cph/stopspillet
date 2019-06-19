@@ -84,6 +84,9 @@
   .tile {
     height: 440px;
   }
+  .quiz-question p {
+    min-height: 85px;
+  }
 }
 @media(min-width: 660px) {
   .hide-desktop {
@@ -122,6 +125,18 @@
     width: 100%;
     background-size: 100% auto;
     height: 145px;
+  }
+  .quiz-button{
+    font-size: 12pt;
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+  .quiz-button-no,
+  .quiz-button-yes{
+    width: 90px;
+  }
+  .quiz-question p {
+    min-height: 120px;
   }
 }
 
