@@ -12,15 +12,15 @@ export default function StepBullet() {
               <React.Fragment>
                     {context.state.quiz.map((item, i) => {
                          if(i === context.state.currentStep) {
-                            return <img src={CurrentImage} width="20" height="20" hspace="3"/>
+                            return <img src={CurrentImage} width="20" height="20" hspace="3" key={i} alt="" />
                          } else {
                             if(item == null) {
-                                return <img src={NullImage} width="20" height="20" hspace="3"/>
+                                return <img src={NullImage} width="20" height="20" hspace="3" key={i} alt=""/>
                             } else {
                                 if(item === true) {
-                                    return <img src={YesImage} width="20" height="20" hspace="3"/>
+                                    return <img src={YesImage} width="20" height="20" hspace="3" key={i} alt=""/>
                                 } else {
-                                    return <img src={NoImage} width="20" height="20" hspace="3"/>
+                                    return <img src={NoImage} width="20" height="20" hspace="3" key={i} alt=""/>
                                 }
                             }
                          }
