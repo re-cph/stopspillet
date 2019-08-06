@@ -6,7 +6,7 @@ Install node and yarn
 
 ## 'brew install node'
 ## 'brew install yarn'
-## 'install yarn'
+## 'yarn install'
 
 Before starting developing 
 ## 'yarn start'
