@@ -87,6 +87,9 @@
   .quiz-question p {
     min-height: 85px;
   }
+  .footer p{
+    padding-bottom: 70px;
+  }
 }
 @media(min-width: 660px) {
   .hide-desktop {
