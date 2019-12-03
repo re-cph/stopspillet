@@ -1,8 +1,8 @@
 .chat {
   margin: 0 auto;
 
-  margin-bottom: 50px;
-  border-top: 1px solid #14133c;
+  margin-bottom: 30px;
+/*  border-bottom: 1px solid #14133c;*/  
   padding-top: 50px;
 
   max-width: 600px;
