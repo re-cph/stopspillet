@@ -51,6 +51,10 @@
 	padding-top: 30px;
 }
 
+.quiz-question.quiz-content-header h1{
+	display:none;
+}
+
 .quiz-content-top{
 	background: #fff;
 	width: 200px;
