@@ -121,9 +121,10 @@
 	padding: 0px;
 }
 
-.quiz h1{
+.quiz h2{
 	padding-bottom: 10px;
 	color: #fff;
+	padding-top: 0;
 }
 
 .quiz p{
@@ -157,6 +158,6 @@ section.quiz-answer.quiz-content-footer {
   margin-top: 20px;
 }
 
-.quiz-content-header h1{
+.quiz-content-header h2{
     font-size: 2em !important;
 }

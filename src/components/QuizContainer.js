@@ -12,7 +12,7 @@ class QuizContainer extends Component {
           <section className='quiz'>
             <section className='quiz-explainer quiz-content-container'>
               <section className='quiz-explainer quiz-content-header'>
-                <h1>TEST DIG SELV</h1>
+                <h2>TEST DIG SELV</h2>
                 <p>
                   Har du et problematisk forhold til spil? Tag en test med 9 spørgsmål om dine spilvaner.
                 </p>
