@@ -14,7 +14,7 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script type="text/javascript">
+    <script>
         window.cookieconsent_options = {
             message: "<h4>Brug af cookies</h4>\nPå stopspillet.dk bruger vi cookies til at samle statistik, så vi kan forbedre din oplevelse på sitet. Du accepterer, når du klikker dig videre. ",
             learnMore: "L&aelig;s mere",
@@ -24,10 +24,10 @@
             target: "_blank"
         }
     </script>
-    <script type="text/javascript" src="js/cookieconsent.js"></script>
+    <script src="js/cookieconsent.js"></script>
     <script src="//assets.adobedtm.com/58ae824d9566/559d1c9e8419/launch-052159e4177b.min.js" async></script>
     
-    <script type="text/javascript" async="" src="https://phs.basechat.com/js/basechat-integration.js?winid=252705131975"></script>
+    <script async="" src="https://phs.basechat.com/js/basechat-integration.js?winid=252705131975"></script>
     <link type="text/css" rel="stylesheet" href="https://phs.basechat.com/custom/707507131956/entry_css/2/0/0/288073816443/1/stopspillet-fixed-div.css?v=1">
     
     <link rel="stylesheet" href="css/style.css">
@@ -68,12 +68,12 @@
     </div>
 
     <div id="content">
-      <section id="chat" class="chat">
-        <!-- Adds html block-element with width:100% and dynamic height -->
-        <!-- Insert in website-content at desired location -->
-        <script type = 'text/javascript' async src='https://phs.basechat.com/js/basechat-integration.js?winid=161878131965'></script>
-        <!--Basechat main entry end -->
-      </section>
+        <div id="chat" class="chat">
+            <!-- Adds html block-element with width:100% and dynamic height -->
+            <!-- Insert in website-content at desired location -->
+            <script async src='https://phs.basechat.com/js/basechat-integration.js?winid=161878131965'></script>
+            <!--Basechat main entry end -->
+        </div>
 
         <div class="container section-1">
             <div class="row">
@@ -126,7 +126,7 @@
                 <div class="col-lg-3"></div>
 
                 <div class="col-lg-6">
-                    <section id="embedded-react-app"></section>
+                    <div id="embedded-react-app"></div>
                 </div>
                 <div class="col-lg-3"></div>
             </div>
@@ -182,7 +182,7 @@
                 <div class="basechat_ChatOpenText2"></div>
             </div>
         </div>
-        <iframe src="https://phs.basechat.com/aspxIM/chat-contact.aspx?winid=504730131976" class="basechat_iframe" scrolling="no" frameborder="0"></iframe>
+        <iframe src="https://phs.basechat.com/aspxIM/chat-contact.aspx?winid=504730131976" class="basechat_iframe"></iframe>
     </div>
    
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
