@@ -121,10 +121,14 @@
 	padding: 0px;
 }
 
-.quiz h2{
+.quiz h2, 
+.quiz h3{
 	padding-bottom: 10px;
 	color: #fff;
 	padding-top: 0;
+}
+.quiz-content-header h2{
+    font-size: 2em !important;
 }
 
 .quiz p{
@@ -156,8 +160,4 @@ section.quiz-answer.quiz-content-footer {
 	border-radius: 13px;
 	border: 1px solid;
   margin-top: 20px;
-}
-
-.quiz-content-header h2{
-    font-size: 2em !important;
 }
