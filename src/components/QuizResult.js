@@ -21,7 +21,7 @@ export default function QuizResult () {
       {(context) => (
         <React.Fragment>
           <section className='quiz-content-header'>
-            <h1>Resultat</h1>
+            <h3>Resultat</h3>
             <p>
               {resultSelector(context.state.quiz.filter(val => val === true).length)}
             </p>

@@ -7,9 +7,8 @@ export default function QuizQuestion() {
       {(context) => (
         <React.Fragment>
           <section className='quiz-question quiz-content-header'>
-            <h1>
-              {`${context.state.currentStep +1}.`}
-            </h1>
+            <h4>
+            </h4>
             <p>
               {context.data[context.state.currentStep].question}
             </p>
