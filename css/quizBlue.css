@@ -127,13 +127,6 @@
 	color: #fff;
 }
 
-.quiz-content-header p:first-child{
-	display: none;
-	padding-right: 0px;
-	font-size: 1em;
-	font-weight: 900;
-}
-
 section.quiz-question.quiz-content-header {
     display: inline-flex;
 	padding-top: 20px;
