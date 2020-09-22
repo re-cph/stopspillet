@@ -187,14 +187,16 @@ th{
 
 a {
   color: white;
-  text-decoration: none;
+}
+.footer a{
+	text-decoration: underline;
 }
 .arrow {
   text-align: center;
   margin: 70px 0px 0px 0px;
 }
 
-.arrow a:hover{
+a:hover{
 	color: #ffffff;
 	text-decoration: none;
 }
