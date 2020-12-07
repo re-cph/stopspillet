@@ -25,6 +25,7 @@
         }
     </script>
     <script src="js/cookieconsent.js"></script>
+    <script src="js/openingHours.js"></script>
     <script src="//assets.adobedtm.com/58ae824d9566/559d1c9e8419/launch-052159e4177b.min.js" async></script>
     
     <script async="" src="https://phs.basechat.com/js/basechat-integration.js?winid=252705131975"></script>
@@ -32,6 +33,7 @@
     
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/quizBlue.css">
+    <link rel="stylesheet" href="css/openingHours.css">
 
 </head>
 
@@ -40,35 +42,49 @@
         <a href="https://www.survey-xact.dk/LinkCollector?key=RRA113MKSPC5" target="_blank">Var du tilfreds med vores rådgivning? Deltag i tilfredshedsundersøgelse her!</a>
         <button class="close-button" type="button" onclick="document.getElementById('survey').style.display = 'none';">Luk</button>
     </div>
-    <div id="overlay">
 
-        <div class="wrapper">
-            <div class="align-middle">
-                <img src="svg/logo.svg" alt="StopSpillet logo">
-                <h1>Hvis du ikke kan sige det højt, kan du sige det til os</h1>
-                <a href="tel:70222825" class="btn btn-primary">Ring 70 22 28 25</a>
+    <div class="frontpageHero">
+        <div class="frontpageHero-content">
+            <img src="svg/logo.svg" alt="StopSpillet logo" class="frontpageHero-logo">
+            <h1 class="frontpageHero-title">Hvis du ikke kan sige det højt, kan du sige det til os</h1>
 
-                <!-- BEGIN: Extraordinary message -->
-                <!--
-                <div style="margin:40px auto;width:200px;padding:20px;background-color:#110f3a;">
-                    <p class="bold" style="color:white;">StopSpillets telefon og chat er lukket i påsken.</p>
-                    <p style="color:white;">Vi er klar til at tale med dig igen fra tirsdag den 14. april kl. 9.00.</p>
+            <div class="openingHoursContainer">
+                <div class="openingHours" id='openingHoursChat'>
+                    <div class="openingHours-box">
+                        <div class="openingHours-icon">
+                            <img src='/images/openingHours_chat.png' />
+                        </div>
+                        <div class="openingHours-content">
+                            <div class="openingHours-topLine"></div>
+                            <div class="openingHours-bottomLine"></div>
+                        </div>
+                    </div>
+                    <div class="btn btn-primary openingHours-hidden openingHours-action" onclick="basechat_fixedElementClick()">Chat nu</div>
                 </div>
-                -->
-                <!-- END: Extraordinary message -->
 
-                <div class="arrow bounce">
-                    <a title="Scroll ned" class="fa fa-arrow-down fa-2x" href="#content"></a>
+                <div class="openingHours" id='openingHoursPhone'>
+                    <div class="openingHours-box">
+                        <div class="openingHours-icon">
+                            <img src='/images/openingHours_phone.png' />
+                        </div>
+                        <div class="openingHours-content">
+                            <div class="openingHours-topLine"></div>
+                            <div class="openingHours-bottomLine"></div>
+                        </div>
+                    </div>
+                    <a href="tel:70222825" class="btn btn-primary openingHours-hidden openingHours-action">Ring 70 22 28 25</a>
                 </div>
             </div>
 
+            <div class="arrow bounce">
+                <a title="Scroll ned" class="fa fa-arrow-down fa-2x" href="#content"></a>
+            </div>
         </div>
 
-        <video title="Her afspilles en reklamefilm uden lyd. Filmen fungerer som baggrund, og formidler derfor ikke noget indhold." id="hero-vid" autoplay loop muted playsinline>
+        <video class="frontpageHero-video" title="Her afspilles en reklamefilm uden lyd. Filmen fungerer som baggrund, og formidler derfor ikke noget indhold." autoplay loop muted playsinline>
             <source type="video/mp4" src="video/frontpage-video.mp4"></source>
             Her afspilles en reklamefilm uden lyd. Filmen fungerer som baggrund, og formidler derfor ikke noget indhold.
         </video>
-
     </div>
 
     <div id="content">
