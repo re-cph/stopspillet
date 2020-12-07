@@ -82,7 +82,7 @@ jQuery(function($) {
 
     /* HOW STUFF WORKS
      * Opening hours: 
-     * You can add and remove opening hours by add a config object to the hours array.
+     * You can add and remove opening hours by adding a config object to the hours array.
      * You need to define a open and close attribute, which include the following attributes:
      * - day: The day of the week, using the javascript notation. https://www.w3schools.com/jsref/jsref_getday.asp
      * - hours: hour of the day
@@ -91,7 +91,7 @@ jQuery(function($) {
      * the current time is between hours and minutes.
      * Note: open includes the current time, close does not.
      * Example: {open: {day: 1, hours: 12, minutes: 0}, close: {day: 1, hours: 15, minutes: 0}}
-     * This states the the opening hours are on a monday, between 12.00.00 and 14.59.59
+     * This states the opening hours are on a monday, between 12.00.00 and 14.59.59
      * You can add multiple opening hours on a particular day, but be careful, the attributes are not validated.
      * Please sort the entries manually, starting with day 0.
      */
@@ -103,7 +103,7 @@ jQuery(function($) {
             {open: {day: 4, hours: 12, minutes: 0}, close: {day: 4, hours: 15, minutes: 0}},
         ],
         openTopText: 'Vores chat er åben',
-        openBottomText: 'Vi er klar til at chatte indtil $$ idag',
+        openBottomText: 'Vi er klar til at chatte indtil kl. $$ i dag',
         closedTopText: 'Chatten er lukket. Vi åbner igen',
         closedBottomText: '$$'
     });
@@ -117,7 +117,7 @@ jQuery(function($) {
             {open: {day: 5, hours: 9, minutes: 0}, close: {day: 5, hours: 17, minutes: 0}},
         ],
         openTopText: 'Vores telefoner er åbne',
-        openBottomText: 'Vi er klar til at tale indtil $$',
+        openBottomText: 'Vi er klar til at tale indtil kl. $$ i dag',
         closedTopText: 'Telefonerne er lukkede. Vi åbner igen',
         closedBottomText: '$$'
     });
