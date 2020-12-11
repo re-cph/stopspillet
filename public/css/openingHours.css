@@ -72,3 +72,11 @@
         display: none;
     }
 }
+
+#holidays {
+    display: none;
+}
+
+#holidays.holidays__active {
+    display: block;
+}

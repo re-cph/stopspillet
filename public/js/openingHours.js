@@ -33,6 +33,16 @@ jQuery(function($) {
         return (day * 24 * 60) + (hours * 60) + minutes
     }
 
+    function compareDateStrings (a, b) {
+        var left = a.split('-');
+        var right = b.split('-');
+
+        var leftDate = new Date(left[0], left[1] - 1, left[2]);
+        var rightDate = new Date(right[0], right[1] - 1, right[2]);
+
+        return leftDate <= rightDate;
+    }
+
     function handleOpeningHours(id, config) {
         // Determine if we're open at the moment
         var tempDate = new Date()
@@ -75,6 +85,24 @@ jQuery(function($) {
 
             element.find('.openingHours-topLine').html(config.closedTopText.replace('$$', openingText));
             element.find('.openingHours-bottomLine').html(config.closedBottomText.replace('$$', openingText)).addClass('openingHours-bigText');
+        }
+    }
+
+    function handleHolidays(id, config) {
+        var elm = $(id);
+        if (!elm || !config || !Array.isArray(config)) {
+            return
+        }
+
+        var currentDate = new Date().toJSON().split('T')[0];
+        var activeHoliday = config.find(function(h) {
+            return compareDateStrings(h.startDate, currentDate) && compareDateStrings(currentDate, h.endDate);
+        })
+
+        if (activeHoliday) {
+            elm.find('.holidays-title').html(activeHoliday.title);
+            elm.find('.holidays-excerpt').html(activeHoliday.excerpt);
+            elm.addClass('holidays__active');
         }
     }
 
@@ -121,4 +149,31 @@ jQuery(function($) {
         closedTopText: 'Telefonerne er lukkede. Vi åbner igen',
         closedBottomText: '$$'
     });
+
+    /* HOW STUFF WORKS
+     * Holidays:
+     * You can add holidays by adding an object to the array below:
+     * The attributes for the object are:
+     * - startDate: Date to start the message
+     * - endDate: Date to end the message
+     * - title: Holiday title
+     * - excerpt: Descriptive text
+     * Both startDate and endDate are inclusive, meaning the message
+     * will be shown on both dates.
+     */
+
+    handleHolidays('#holidays', [
+        {
+            startDate: '2020-12-14',
+            endDate: '2020-12-27',
+            title: 'NB: Lukket i julen',
+            excerpt: 'Telefonen og chatten holder lukket 24. og 25. december.'
+        },
+        {
+            startDate: '2020-12-28',
+            endDate: '2021-01-01',
+            title: 'NB: Lukket over nytår',
+            excerpt: 'Telefonen og chatten holder lukket 31. december og 1. januar.'
+        }
+    ])
 });
