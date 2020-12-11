@@ -132,7 +132,7 @@ jQuery(function($) {
         var nextOpenHours = getNextOpenHours(
             tempDate,
             config.hours,
-            config.holidays,
+            config.holidays
         );
 
         var openNow = nextOpenHours.diff === 0 && (
