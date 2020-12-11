@@ -1,11 +1,15 @@
 .openingHours {
     flex: 0 1 50%;
     margin: 0 10px;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    align-items: stretch;
     margin-top: 40px;
+
+}
+@supports (grid-row: auto) {
+    .openingHours {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: stretch;
+    }
 }
 
 .openingHours-box {
@@ -14,6 +18,7 @@
     background-color: rgba(0, 0, 0, 0.3);
     text-align: left;
     display: flex;
+    width: 100%;
 }
 
 .openingHours-content {
@@ -37,6 +42,7 @@
 .openingHours-action {
     margin-top: 10px;
     cursor: pointer;
+    width: 100%;
 }
 
 .openingHours-hidden {
@@ -55,7 +61,6 @@
 
 @media only screen and (min-width: 768px) {
     .openingHoursContainer {
-        display: -ms-flexbox;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
@@ -63,8 +68,12 @@
     }
 
     #openingHoursChat {
-        display: -ms-flexbox;
-        display: flex;
+        display: block;
+    }
+    @supports (grid-row: auto) {
+        #openingHoursChat {
+            display: flex;
+        }
     }
 }
 
