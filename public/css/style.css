@@ -276,19 +276,24 @@ a:hover{
 	height: calc(100vh - 42px);
 }
 
-.frontpageHero-content {
+.frontpageHero-wrapper {
 	position: absolute;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
 	display: flex;
-	flex-flow: column nowrap;
 	justify-content: center;
 	align-items: center;
 }
 
+.frontpageHero-content {
+	width: 100%;
+	max-width: 768px;
+}
+
 .frontpageHero-title {
+	margin: 0 auto;
 	width: 50%;
 	text-align: center;
 	
@@ -297,6 +302,8 @@ a:hover{
 }
 
 .frontpageHero-logo {
+	display: block;
+	margin: 0 auto;
 	width: 10em;
 	padding-top: 32px;
 	padding-bottom: 40px;

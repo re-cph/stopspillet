@@ -44,40 +44,42 @@
     </div>
 
     <div class="frontpageHero">
-        <div class="frontpageHero-content">
-            <img src="svg/logo.svg" alt="StopSpillet logo" class="frontpageHero-logo">
-            <h1 class="frontpageHero-title">Hvis du ikke kan sige det højt, kan du sige det til os</h1>
+        <div class="frontpageHero-wrapper">
+            <div class="frontpageHero-content">
+                <img src="svg/logo.svg" alt="StopSpillet logo" class="frontpageHero-logo">
+                <h1 class="frontpageHero-title">Hvis du ikke kan sige det højt, kan du sige det til os</h1>
 
-            <div class="openingHoursContainer">
-                <div class="openingHours" id='openingHoursChat'>
-                    <div class="openingHours-box">
-                        <div class="openingHours-icon">
-                            <img src='/images/openingHours_chat.png' />
+                <div class="openingHoursContainer">
+                    <div class="openingHours" id='openingHoursChat'>
+                        <div class="openingHours-box">
+                            <div class="openingHours-icon">
+                                <img src='/images/openingHours_chat.png' />
+                            </div>
+                            <div class="openingHours-content">
+                                <div class="openingHours-topLine"></div>
+                                <div class="openingHours-bottomLine"></div>
+                            </div>
                         </div>
-                        <div class="openingHours-content">
-                            <div class="openingHours-topLine"></div>
-                            <div class="openingHours-bottomLine"></div>
-                        </div>
+                        <div class="btn btn-primary openingHours-hidden openingHours-action" onclick="basechat_fixedElementClick()">Chat nu</div>
                     </div>
-                    <div class="btn btn-primary openingHours-hidden openingHours-action" onclick="basechat_fixedElementClick()">Chat nu</div>
+
+                    <div class="openingHours" id='openingHoursPhone'>
+                        <div class="openingHours-box">
+                            <div class="openingHours-icon">
+                                <img src='/images/openingHours_phone.png' />
+                            </div>
+                            <div class="openingHours-content">
+                                <div class="openingHours-topLine"></div>
+                                <div class="openingHours-bottomLine"></div>
+                            </div>
+                        </div>
+                        <a href="tel:70222825" class="btn btn-primary openingHours-hidden openingHours-action">Ring 70 22 28 25</a>
+                    </div>
                 </div>
 
-                <div class="openingHours" id='openingHoursPhone'>
-                    <div class="openingHours-box">
-                        <div class="openingHours-icon">
-                            <img src='/images/openingHours_phone.png' />
-                        </div>
-                        <div class="openingHours-content">
-                            <div class="openingHours-topLine"></div>
-                            <div class="openingHours-bottomLine"></div>
-                        </div>
-                    </div>
-                    <a href="tel:70222825" class="btn btn-primary openingHours-hidden openingHours-action">Ring 70 22 28 25</a>
+                <div class="arrow bounce">
+                    <a title="Scroll ned" class="fa fa-arrow-down fa-2x" href="#content"></a>
                 </div>
-            </div>
-
-            <div class="arrow bounce">
-                <a title="Scroll ned" class="fa fa-arrow-down fa-2x" href="#content"></a>
             </div>
         </div>
 
