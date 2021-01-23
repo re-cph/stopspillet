@@ -203,6 +203,15 @@ a:hover{
 	text-decoration: none;
 }
 
+a.normal{
+	text-decoration: underline;
+	color: #13113a;
+}
+a.normal:hover{
+	color: #13113a;
+	text-decoration: none;
+}
+
 .bounce {
   -moz-animation: bounce 2s infinite;
   -webkit-animation: bounce 2s infinite;
