@@ -486,7 +486,7 @@ h2.number{
 	Survey
 * -------------------------------*/
 
-#survey {
+/*#survey {
 	background-color: rgba(150,180,220,1);
 	border-radius: 50px;
 	border: 1px solid white; 
@@ -512,7 +512,7 @@ h2.number{
 	float: left;
 	padding: 20px 10px;
 	line-height: 1.2em;
-}
+}*/
 
 
 /* -------------------------------
@@ -526,7 +526,7 @@ h2.number{
 	height: 500px;
 }
 
-#survey {
+/*#survey {
 	bottom: 65px;
     left: 10px;
     width: 300px;
@@ -537,7 +537,7 @@ h2.number{
 }
 #survey .close-button{
 	margin-top: 18px;
-}
+}*/
 
 .arrow.bounce {
     display: none;
@@ -561,4 +561,3 @@ h2.number{
 		  height: 110px;
 	}
 }
-
