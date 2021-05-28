@@ -389,7 +389,17 @@ h2.number{
 .col-lg-4{
 	padding: 20px;
 }
-
+.solid-box{
+    background: #13113a;
+    text-align: center;
+    padding: 30px;
+}
+.solid-box h2, 
+.solid-box p,
+.solid-box a,
+.solid-box a:hover{
+	color: #fff;
+}
 /* -------------------------------
 	Section-2
 * -------------------------------*/
@@ -408,8 +418,8 @@ h2.number{
 	height: 400px;
 	min-height:100%;
 	background-image: url(../img/1.jpg);
-  background-size:cover;
-  box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.5);
+  	background-size:cover;
+  	box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.5);
 }
 
 .section-2 .btn{
