@@ -389,6 +389,56 @@ h2.number{
 .col-lg-4{
 	padding: 20px;
 }
+.solid-box{
+    background: #13113a;
+    text-align: center;
+    padding: 30px;
+	display: flex;
+	flex-flow: column;
+}
+.solid-box h2, 
+.solid-box p,
+.solid-box a,
+.solid-box a:hover{
+	color: #fff;
+}
+
+.solid-box h2 {
+	padding-top: 0;
+}
+
+.rofus-button {
+	padding: 10px;
+    margin-top: 15px;
+    font-size: 18px;
+    font-family: "Republic PLTY Heavy","Helvetica Neue",Helvetica,Arial,sans-serif;
+    border: 1px solid #fff;
+    width: 100%;
+    text-align: center;
+	transition: border 200ms ease-in-out, background-color 200ms ease-in-out;
+}
+.rofus-button:hover,
+.solid-box:hover .rofus-button {
+	background-color: white;
+	color: #13113a;
+}
+
+.solid-box-container {
+	align-items: stretch;
+}
+.solid-box-container > div {
+	display: flex;
+	flex-flow: column;
+	flex: 1 1 100%;
+}
+
+.solid-box-container .solid-box {
+	flex: 1 1 100%;
+}
+
+.solid-box p {
+	flex: 1 1 auto;
+}
 
 /* -------------------------------
 	Section-2
@@ -408,8 +458,8 @@ h2.number{
 	height: 400px;
 	min-height:100%;
 	background-image: url(../img/1.jpg);
-  background-size:cover;
-  box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.5);
+  	background-size:cover;
+  	box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.5);
 }
 
 .section-2 .btn{
