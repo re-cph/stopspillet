@@ -130,7 +130,10 @@
 section.quiz-question.quiz-content-header {
     display: inline-flex;
 	padding-top: 20px;
-	min-height: 80px;
+}
+
+.quiz-content-footer {
+	margin-top: 20px;
 }
 
 section.quiz-answer.quiz-content-footer {
@@ -144,4 +147,15 @@ section.quiz-answer.quiz-content-footer {
 	border-radius: 13px;
  	border: 1px solid;
 	margin-top: 20px;
+}
+
+.quiz-content-container a {
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+@media (hover: hover) {
+	.quiz-content-container a:hover {
+		text-decoration: none;
+	}
 }
