@@ -2,7 +2,7 @@ jQuery(function($) {
     /* DO NOT TOUCH */
     function getOpeningDayText(today, next, skipToday) {
         if (today === next && !skipToday) {
-            return 'kl:'
+            return 'i dag'
         } else if (
             today + 1 === next ||
             (next === 6 && today === 0)
@@ -152,7 +152,7 @@ jQuery(function($) {
             var openingText = getOpeningDayText(
                 tempDate.getDay(),
                 nextOpenHours.open.day,
-                true
+                false
             );
 
             var openingHours = nextOpenHours.open.hours.toString();
