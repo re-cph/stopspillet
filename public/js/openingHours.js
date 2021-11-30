@@ -206,6 +206,8 @@ jQuery(function($) {
         '2020-12-25',
         '2020-12-31',
         '2020-01-01',
+        '2021-12-24',
+        '2021-12-31',
     ];
 
     /* HOW STUFF WORKS
@@ -266,16 +268,16 @@ jQuery(function($) {
 
     handleHolidayMessage('#holidays', [
         {
-            startDate: '2020-12-14',
-            endDate: '2020-12-27',
-            title: 'NB: Lukket i julen',
-            excerpt: 'Telefonen og chatten holder lukket 24. og 25. december.'
+            startDate: '2021-12-23',
+            endDate: '2021-12-24',
+            title: 'NB: Lukket juleaftensdag',
+            excerpt: 'Telefonen og chatten holder lukket 24. december.'
         },
         {
-            startDate: '2020-12-28',
-            endDate: '2021-01-01',
-            title: 'NB: Lukket over nytår',
-            excerpt: 'Telefonen og chatten holder lukket 31. december og 1. januar.'
+            startDate: '2021-12-30',
+            endDate: '2021-12-31',
+            title: 'NB: Lukket nytårs aften',
+            excerpt: 'Telefonen og chatten holder lukket 31. december'
         }
     ]);
 });
