@@ -247,16 +247,14 @@ jQuery(function($) {
             {open: {day: 1, hours: 9, minutes: 0}, close: {day: 1, hours: 21, minutes: 0}},
             {open: {day: 2, hours: 9, minutes: 0}, close: {day: 2, hours: 21, minutes: 0}},
             {open: {day: 3, hours: 9, minutes: 0}, close: {day: 3, hours: 21, minutes: 0}},
-            // {open: {day: 4, hours: 9, minutes: 0}, close: {day: 4, hours: 21, minutes: 0}},
+            {open: {day: 4, hours: 9, minutes: 0}, close: {day: 4, hours: 21, minutes: 0}},
             {open: {day: 5, hours: 9, minutes: 0}, close: {day: 5, hours: 17, minutes: 0}},
         ],
         holidays: holidays,
         openTopText: 'Vores telefoner er åbne',
         openBottomText: 'Vi er klar til at tale indtil $$ i dag',
-        // closedTopText: 'Telefonerne er lukkede. Vi åbner igen',
-        // closedBottomText: '$$',
-        closedTopText: 'Midlertidigt ude af drift',
-        closedBottomText: 'Vi er snart tilbage'
+        closedTopText: 'Telefonerne er lukkede. Vi åbner igen',
+        closedBottomText: '$$'
     });
 
     /* HOW STUFF WORKS
