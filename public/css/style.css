@@ -48,40 +48,40 @@ table {
 
 @font-face {
     font-family: 'Republic';
-    src: url('/font/Republic-Heavy.woff2') format('woff2'),
-        url('/font/Republic-Heavy.woff') format('woff');
+    src: url('../fonts/Republic-Heavy.woff2') format('woff2'),
+        url('../fonts/Republic-Heavy.woff') format('woff');
     font-weight: 900;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Republic';
-    src: url('/font/Republic-DemiBold.woff2') format('woff2'),
-        url('/font/Republic-DemiBold.woff') format('woff');
+    src: url('../fonts/Republic-DemiBold.woff2') format('woff2'),
+        url('../fonts/Republic-DemiBold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Republic';
-    src: url('font/Republic.woff2') format('woff2'),
-        url('font/Republic.woff') format('woff');
+    src: url('../fonts/Republic.woff2') format('woff2'),
+        url('../fonts/Republic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Republic';
-    src: url('font/Republic-Bold.woff2') format('woff2'),
-        url('font/Republic-Bold.woff') format('woff');
+    src: url('../fonts/Republic-Bold.woff2') format('woff2'),
+        url('../fonts/Republic-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Republic';
-    src: url('font/Republic-Light.woff2') format('woff2'),
-        url('font/Republic-Light.woff') format('woff');
+    src: url('../fonts/Republic-Light.woff2') format('woff2'),
+        url('../fonts/Republic-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
