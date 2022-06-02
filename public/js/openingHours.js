@@ -202,12 +202,27 @@ jQuery(function($) {
      */
 
     var holidays = [
-        '2020-12-24',
-        '2020-12-25',
-        '2020-12-31',
-        '2020-01-01',
-        '2021-12-24',
-        '2021-12-31',
+        '2022-06-06',
+        '2022-12-26',
+        '2023-04-06',
+        '2023-04-07',
+        '2023-04-10',
+        '2023-05-05',
+        '2023-05-18',
+        '2023-05-29',
+        '2023-12-25',
+        '2023-12-26',
+        '2024-01-01',
+        '2024-03-28',
+        '2024-03-29',
+        '2024-04-01',
+        '2024-04-26',
+        '2024-05-09',
+        '2024-05-20',
+        '2024-06-05',
+        '2024-12-25',
+        '2024-12-26',
+
     ];
 
     /* HOW STUFF WORKS
@@ -271,16 +286,88 @@ jQuery(function($) {
 
     handleHolidayMessage('#holidays', [
         {
-            startDate: '2021-12-23',
-            endDate: '2021-12-24',
-            title: 'NB: Lukket juleaftensdag',
-            excerpt: 'Telefonen og chatten holder lukket 24. december.'
+            startDate: '2022-06-03',
+            endDate: '2022-06-06',
+            title: 'NB: Lukket 2. Pinsedag',
+            excerpt: 'Telefonen og chatten holder lukket 6. juni.'
         },
         {
-            startDate: '2021-12-30',
-            endDate: '2021-12-31',
-            title: 'NB: Lukket nytårs aften',
-            excerpt: 'Telefonen og chatten holder lukket 31. december'
-        }
+            startDate: '2022-12-23',
+            endDate: '2022-12-26',
+            title: 'NB: Lukket 2. Juledag',
+            excerpt: 'Telefonen og chatten holder lukket 26. december.'
+        },
+        {
+            startDate: '2023-04-05',
+            endDate: '2023-04-10',
+            title: 'NB: Lukket i påsken',
+            excerpt: 'Telefonen og chatten holder lukket fra 6. april til og med 10. april.'
+        },
+        {
+            startDate: '2023-05-04',
+            endDate: '2023-05-05',
+            title: 'NB: Lukket Store Bededag',
+            excerpt: 'Telefonen og chatten holder lukket 5. maj.'
+        },
+        {
+            startDate: '2023-05-17',
+            endDate: '2023-05-18',
+            title: 'NB: Lukket Kristi Himmelfartsdag',
+            excerpt: 'Telefonen og chatten holder lukket 18. maj.'
+        },
+        {
+            startDate: '2023-05-26',
+            endDate: '2023-05-29',
+            title: 'NB: Lukket 2. Pinsedag',
+            excerpt: 'Telefonen og chatten holder lukket 29. maj.'
+        },
+        {
+            startDate: '2023-12-22',
+            endDate: '2023-12-26',
+            title: 'NB: Lukket i juledagene',
+            excerpt: 'Telefonen og chatten holder lukket 25. og 26. december.'
+        },
+        {
+            startDate: '2023-12-29',
+            endDate: '2024-01-01',
+            title: 'NB: Lukket Nytårsdag',
+            excerpt: 'Telefonen og chatten holder lukket 1. januar.'
+        },
+        {
+            startDate: '2024-03-27',
+            endDate: '2024-04-01',
+            title: 'NB: Lukket i påsken',
+            excerpt: 'Telefonen og chatten holder lukket fra 28. marts til og med 1. april.'
+        },
+        {
+            startDate: '2024-04-25',
+            endDate: '2024-04-26',
+            title: 'NB: Lukket Store Bededag',
+            excerpt: 'Telefonen og chatten holder lukket 26. april.'
+        },
+        {
+            startDate: '2024-05-08',
+            endDate: '2024-05-09',
+            title: 'NB: Lukket Kristi Himmelfartsdag',
+            excerpt: 'Telefonen og chatten holder lukket 9. maj.'
+        },
+        {
+            startDate: '2024-05-17',
+            endDate: '2024-05-20',
+            title: 'NB: Lukket 2. Pinsedag',
+            excerpt: 'Telefonen og chatten holder lukket 20. maj.'
+        },
+        {
+            startDate: '2024-06-04',
+            endDate: '2024-06-05',
+            title: 'NB: Lukket Grundlovsdag',
+            excerpt: 'Telefonen og chatten holder lukket 5. juni.'
+        },
+        {
+            startDate: '2024-12-24',
+            endDate: '2024-12-26',
+            title: 'NB: Lukket i juledagene',
+            excerpt: 'Telefonen og chatten holder lukket 25. og 26. december.'
+        },
     ]);
 });
