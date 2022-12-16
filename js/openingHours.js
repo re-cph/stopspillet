@@ -1,5 +1,24 @@
 jQuery(function($) {
     /* DO NOT TOUCH */
+    function diffInDays(future) {
+        const currentDate = new Date();
+
+        const present = new Date(
+            currentDate.getFullYear(),
+            currentDate.getMonth(),
+            currentDate.getDate()
+        );
+
+        // One day Time in ms (milliseconds)
+        const ONE_DAY = 1000 * 60 * 60 * 24
+        
+        // To Calculate the result in milliseconds and then converting into days
+        const Result = Math.round(future.getTime() - present.getTime()) / (ONE_DAY);
+        
+        // To remove the decimals from the (Result) resulting days value
+        return parseInt(Result.toFixed(0));
+    }
+
     function getOpeningDayText(today, next, skipToday) {
         if (today === next && !skipToday) {
             return 'i dag'
@@ -69,21 +88,59 @@ jQuery(function($) {
 
         function mapNextHours (c) {
             const currentDay = currentDate.getDay();
-            var nextDay = c.open.day;
-            var diff = nextDay < currentDay ? (nextDay + 7) - currentDay : nextDay - currentDay;
+            const nextDay = c.open.day;
 
-            var nextDate = new Date(
-                currentDate.getFullYear(),
-                currentDate.getMonth(),
-                currentDate.getDate() + diff + weekOffset
-            );
+            if (typeof nextDay === 'string') {
+                const day = new Date(nextDay);
+                const diff = diffInDays(day);
 
-            return {
-                open: c.open,
-                close: c.close,
-                date: getDateString(nextDate),
-                diff: diff + weekOffset,
+                if (diff < 0) {
+                    return
+                }
+
+                return {
+                    open: {
+                        ...c.open,
+                        day: day.getDay()
+                    },
+                    close: {
+                        ...c.close,
+                        day: day.getDay()
+                    },
+                    specificDate: nextDay,
+                    diff: diffInDays(day),
+                }
+            } else {
+                const diff = nextDay < currentDay ? (nextDay + 7) - currentDay : nextDay - currentDay;
+    
+                const nextDate = new Date(
+                    currentDate.getFullYear(),
+                    currentDate.getMonth(),
+                    currentDate.getDate() + diff + weekOffset
+                );
+    
+                return {
+                    open: c.open,
+                    close: c.close,
+                    date: getDateString(nextDate),
+                    diff: diff + weekOffset,
+                }
             }
+        }
+
+        function filterSpecificDates (arr, day) {
+            let rtnArr = arr;
+            if (day.specificDate) {
+                rtnArr = arr.filter(item => item.date !== day.specificDate)
+            }
+            return [...rtnArr, day];
+        }
+
+        function normalizeData (day) {
+            let rtnData = day;
+            rtnData.date = day.specificDate || day.date;
+            delete rtnData.specificDate;
+            return rtnData;
         }
 
         function sortDates (a, b) {
@@ -108,7 +165,14 @@ jQuery(function($) {
         }
 
         while (nextOpenHours === undefined) {
-            var mappedNextHours = hours.map(mapNextHours).sort(sortDates).filter(filterDate);
+            var mappedNextHours = hours
+                .map(mapNextHours)
+                .filter(Boolean)
+                .reduce(filterSpecificDates, [])
+                .map(normalizeData)
+                .sort(sortDates)
+                .filter(filterDate);
+
             if (mappedNextHours.length > 0) {
                 nextOpenHours = mappedNextHours[0];
                 break;
@@ -249,6 +313,11 @@ jQuery(function($) {
             {open: {day: 1, hours: 17, minutes: 0}, close: {day: 1, hours: 21, minutes: 0}},
             {open: {day: 2, hours: 17, minutes: 0}, close: {day: 2, hours: 21, minutes: 0}},
             {open: {day: 4, hours: 17, minutes: 0}, close: {day: 4, hours: 21, minutes: 0}},
+            // Specific dates
+            {open: {day: '2022-12-27', hours: 17, minutes: 0}, close: {day: '2022-12-27', hours: 21, minutes: 0}},
+            {open: {day: '2022-12-29', hours: 9, minutes: 0}, close: {day: '2022-12-29', hours: 15, minutes: 0}},
+            {open: {day: '2022-12-29', hours: 17, minutes: 0}, close: {day: '2022-12-29', hours: 21, minutes: 0}},
+            {open: {day: '2022-12-30', hours: 9, minutes: 0}, close: {day: '2022-12-30', hours: 14, minutes: 0}},
         ],
         holidays: holidays,
         openTopText: 'Vores chat er åben',
@@ -264,6 +333,11 @@ jQuery(function($) {
             {open: {day: 3, hours: 9, minutes: 0}, close: {day: 3, hours: 21, minutes: 0}},
             {open: {day: 4, hours: 9, minutes: 0}, close: {day: 4, hours: 21, minutes: 0}},
             {open: {day: 5, hours: 9, minutes: 0}, close: {day: 5, hours: 17, minutes: 0}},
+            // Specific dates
+            {open: {day: '2022-12-27', hours: 9, minutes: 0}, close: {day: '2022-12-27', hours: 21, minutes: 0}},
+            {open: {day: '2022-12-28', hours: 9, minutes: 0}, close: {day: '2022-12-28', hours: 21, minutes: 0}},
+            {open: {day: '2022-12-29', hours: 9, minutes: 0}, close: {day: '2022-12-29', hours: 21, minutes: 0}},
+            {open: {day: '2022-12-30', hours: 9, minutes: 0}, close: {day: '2022-12-30', hours: 17, minutes: 0}},
         ],
         holidays: holidays,
         openTopText: 'Vores telefoner er åbne',
@@ -285,12 +359,6 @@ jQuery(function($) {
      */
 
     handleHolidayMessage('#holidays', [
-        {
-            startDate: '2022-06-03',
-            endDate: '2022-06-06',
-            title: 'NB: Lukket 2. Pinsedag',
-            excerpt: 'Telefonen og chatten holder lukket 6. juni.'
-        },
         {
             startDate: '2022-12-23',
             endDate: '2022-12-26',
