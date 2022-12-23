@@ -361,9 +361,13 @@ jQuery(function($) {
     handleHolidayMessage('#holidays', [
         {
             startDate: '2022-12-23',
-            endDate: '2022-12-26',
-            title: 'NB: Lukket 2. Juledag',
-            excerpt: 'Telefonen og chatten holder lukket 26. december.'
+            endDate: '2022-12-30',
+            title: 'Åbningstider mellem jul og nytår',
+            excerpt: `26. dec.: lukket <br>
+27. dec.: Tlf 9-21 / chat 17-21<br>
+28. dec.: Tlf 9-21 / chat lukket<br>
+29. dec.: Tlf 9-21 / chat 9-15 &amp; 17-21<br>
+30. dec.: Tlf 9-17 / chat 9-14`
         },
         {
             startDate: '2023-04-05',
