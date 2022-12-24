@@ -150,18 +150,22 @@ jQuery(function($) {
             return a.date > b.date ? 1 : -1;
         }
 
-        function filterDate (c) {
+        function filterHolidays (day) {
+            return !holidays.includes(day.date)
+        }
+
+        function filterPastOpeningHours (day) {
             // Filter out past opening hours
             if (
-                c.diff === 0 && (
-                    dayInMinutes(c.close.day, c.close.hours, c.close.minutes) <=
+                day.diff === 0 && (
+                    dayInMinutes(day.close.day, day.close.hours, day.close.minutes) <=
                     dayInMinutes(currentDate.getDay(), currentDate.getHours(), currentDate.getMinutes())
                 )
             ) {
                 return false;
+            } else {
+                return true;
             }
-
-            return $.inArray(c.date, holidays || []) === -1;
         }
 
         while (nextOpenHours === undefined) {
@@ -171,7 +175,8 @@ jQuery(function($) {
                 .reduce(filterSpecificDates, [])
                 .map(normalizeData)
                 .sort(sortDates)
-                .filter(filterDate);
+                .filter(filterHolidays)
+                .filter(filterPastOpeningHours);
 
             if (mappedNextHours.length > 0) {
                 nextOpenHours = mappedNextHours[0];
