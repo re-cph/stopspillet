@@ -76,8 +76,8 @@
 .quiz-button-back{
 	min-width: 100px;
 	margin-right: 60px;
-	background: #7D7D7D;
-	border-color: #7D7D7D;
+	background: #757575;
+	border-color: #757575;
 }
 @media screen and (max-width: 350px) {
 	.quiz-button-back{
@@ -96,6 +96,7 @@
 .quiz-button-reset{
 	background: #EC6C27;
 	border-color: #EC6C27;
+	color: #13123A;
 	margin-left: 2px;
 }
 
