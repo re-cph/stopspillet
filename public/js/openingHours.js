@@ -279,8 +279,14 @@ jQuery(function($) {
         '2023-05-05',
         '2023-05-18',
         '2023-05-29',
+        '2023-12-24',
         '2023-12-25',
         '2023-12-26',
+        '2023-12-27',
+        '2023-12-28',
+        '2023-12-29',
+        '2023-12-30',
+        '2023-12-31',
         '2024-01-01',
         '2024-03-28',
         '2024-03-29',
@@ -400,15 +406,9 @@ jQuery(function($) {
         },
         {
             startDate: '2023-12-22',
-            endDate: '2023-12-26',
-            title: 'NB: Lukket i juledagene',
-            excerpt: 'Telefonen og chatten holder lukket 25. og 26. december.'
-        },
-        {
-            startDate: '2023-12-29',
-            endDate: '2024-01-01',
-            title: 'NB: Lukket Nytårsdag',
-            excerpt: 'Telefonen og chatten holder lukket 1. januar.'
+            endDate: '2023-01-01',
+            title: 'NB: Vi holder lukket mellem jul og nytår',
+            excerpt: 'Vi åbner igen den 2. januar.'
         },
         {
             startDate: '2024-03-27',
