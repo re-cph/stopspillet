@@ -323,6 +323,7 @@ jQuery(function($) {
             // {open: {day: 4, hours: 12, minutes: 0}, close: {day: 4, hours: 15, minutes: 0}},
             {open: {day: 1, hours: 17, minutes: 0}, close: {day: 1, hours: 21, minutes: 0}},
             {open: {day: 2, hours: 17, minutes: 0}, close: {day: 2, hours: 21, minutes: 0}},
+            {open: {day: 3, hours: 17, minutes: 0}, close: {day: 3, hours: 21, minutes: 0}},
             {open: {day: 4, hours: 17, minutes: 0}, close: {day: 4, hours: 21, minutes: 0}},
             // Specific dates
             {open: {day: '2022-12-27', hours: 17, minutes: 0}, close: {day: '2022-12-27', hours: 21, minutes: 0}},
