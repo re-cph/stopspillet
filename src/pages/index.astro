@@ -1,3 +1,12 @@
+---
+import Footer from "../components/Footer.astro";
+import Hero from "../components/Hero.astro";
+import SectionBand from "../components/SectionBand.astro";
+import SectionBoxes from "../components/SectionBoxes.astro";
+import SectionInfo from "../components/SectionInfo.astro";
+import SectionQuiz from "../components/SectionQuiz.astro";
+---
+
 <!doctype html>
 <html lang="da">
   <head>
@@ -31,7 +40,6 @@
         target: "_blank",
       };
     </script>
-    <!-- <script src="js/cookieconsent.js"></script> -->
     <script src="/js/openingHours.js" is:inline></script>
     <script
       src=""
@@ -40,312 +48,20 @@
       async
       is:inline></script>
 
-    <script
-      async
-      src="https://phs.basechat.com/js/basechat-integration.js?winid=252705131975"
-      is:inline></script>
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="https://phs.basechat.com/custom/707507131956/entry_css/2/0/0/288073816443/1/stopspillet-fixed-div.css?v=1"
-    />
-
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/quizBlue.css" />
     <link rel="stylesheet" href="/css/openingHours.css" />
   </head>
 
   <body>
-    <div class="frontpageHero">
-      <div class="frontpageHero-wrapper">
-        <div class="frontpageHero-content">
-          <img
-            src="svg/logo.svg"
-            alt="StopSpillet logo"
-            class="frontpageHero-logo"
-          />
-          <h1 class="frontpageHero-title">
-            Hvis du ikke kan sige det højt, kan du sige det til os
-          </h1>
-
-          <div class="openingHoursContainer">
-            <div class="openingHours" id="openingHoursChat">
-              <div class="openingHours-box">
-                <div class="openingHours-icon">
-                  <img src="/images/openingHours_chat.png" />
-                </div>
-                <div class="openingHours-content">
-                  <div class="openingHours-topLine"></div>
-                  <div class="openingHours-bottomLine"></div>
-                </div>
-              </div>
-              <iframe
-                height="60"
-                class="openingHours-action"
-                src="https://phs.basechat.com/aspxIM/chat-contact.aspx?winid=430721183264"
-              ></iframe>
-            </div>
-
-            <div class="openingHours" id="openingHoursPhone">
-              <div class="openingHours-box">
-                <div class="openingHours-icon">
-                  <img src="/images/openingHours_phone.png" />
-                </div>
-                <div class="openingHours-content">
-                  <div class="openingHours-topLine"></div>
-                  <div class="openingHours-bottomLine"></div>
-                </div>
-              </div>
-              <a
-                href="tel:70222825"
-                class="btn btn-primary openingHours-hidden openingHours-action"
-                >Ring 70 22 28 25</a
-              >
-            </div>
-          </div>
-
-          <div class="arrow bounce">
-            <a title="Scroll ned" class="fa fa-arrow-down fa-2x" href="#content"
-            ></a>
-          </div>
-        </div>
-      </div>
-
-      <video
-        class="frontpageHero-video"
-        title="Her afspilles en reklamefilm uden lyd. Filmen fungerer som baggrund, og formidler derfor ikke noget indhold."
-        poster="/images/frontpage-stopspillet2023-cover.jpg"
-        autoplay
-        muted
-        playsinline
-      >
-        <source type="video/mp4" src="/video/frontpage-stopspillet2023.mp4" />
-      </video>
-      Her afspilles en reklamefilm uden lyd. Filmen fungerer som baggrund, og formidler
-      derfor ikke noget indhold.
-    </div>
-    <!-- <div class="frontpageHero-video"></div> -->
-
-    <div id="content">
-      <div class="container section-1">
-        <div class="row">
-          <div class="col-lg-8">
-            <h2>Hvad er StopSpillet?</h2>
-            <p>
-              StopSpillet er Spillemyndighedens hjælpelinje om spilafhængighed;
-              i daglig tale kaldet ludomani. StopSpillet er for alle, der har
-              brug for råd og vejledning om ansvarligt spil og spilafhængighed.
-              Vores rådgivere sidder klar til at tale med dig. Sammen finder I
-              ud af, hvilke muligheder du har, og hvordan du kommer videre.
-            </p>
-            <p>
-              <a
-                class="normal"
-                href="https://www.spillemyndigheden.dk/stopspillet-hjaelpelinje-om-spilafhaengighed-ludomani"
-                target="_blank"
-                >Læs mere om StopSpillet på www.spillemyndigheden.dk</a
-              >
-            </p>
-          </div>
-          <h2>Fortrolige samtaler om ludomani</h2>
-          <p>
-            Når du kontakter StopSpillet er samtalen fortrolig mellem dig og
-            rådgiveren. StopSpillets rådgivere er professionelle og uddannede
-            til at rådgive og vejlede inden for ansvarligt spil og
-            spilafhængighed. Spillemyndigheden videregiver ikke oplysninger fra
-            samtalen til andre myndigheder.
-          </p>
-        </div>
-        <div class="col-lg-4">
-          <h2>Tal med os</h2>
-          <p class="bold">Hos StopSpillet kan du få:</p>
-          <ul>
-            <li>Professionel og uvildig rådgivning om ansvarligt spil</li>
-            <li>Afklaring af problematisk spiladfærd</li>
-            <li>Vejledning om behandlingsmuligheder</li>
-          </ul>
-
-          <p class="bold">Vi er klar til at chatte med dig</p>
-          <table>
-            <tr>
-              <td style="width: 100px;">Mandag</td>
-              <td style="width: 100px; text-align: right;">17.00 - 21.00</td>
-            </tr>
-            <tr>
-              <td style="width: 100px;">Tirsdag</td>
-              <td style="width: 100px; text-align: right;">17.00 - 21.00</td>
-            </tr>
-            <tr>
-              <td style="width: 100px;">Onsdag</td>
-              <td style="width: 100px; text-align: right;">17.00 - 21.00</td>
-            </tr>
-            <tr>
-              <td style="width: 100px;">Torsdag</td>
-              <td style="width: 100px; text-align: right;">17.00 - 21.00</td>
-            </tr>
-          </table>
-
-          <p class="bold">Vi er klar til at tale med dig</p>
-          <table>
-            <tr>
-              <td style="width: 100px;">Mandag-torsdag</td>
-              <td style="width: 100px; text-align: right;">9.00 - 21.00</td>
-            </tr>
-            <tr>
-              <td style="width: 100px;">Fredag</td>
-              <td style="width: 100px; text-align: right;">9.00 - 17.00</td>
-            </tr>
-          </table>
-
-          <p>Telefonnummeret er:</p>
-          <a href="tel:70222825"><h2 class="number">70 22 28 25</h2></a>
-
-          <div id="holidays">
-            <p class="bold holidays-title" style="padding-bottom: 0;"></p>
-            <p style="padding-top: 0;" class="holidays-excerpt"></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container section-1">
-      <div class="row solid-box-container">
-        <div class="col-lg-4">
-          <a
-            id="info-spillere"
-            href="https://www.spillemyndigheden.dk/spiller"
-            target="_blank"
-            class="solid-box"
-          >
-            <h2>Spiller du for meget?</h2>
-            <p>Lær at genkende de typiske tegn på ludomani</p>
-            <div class="rofus-button">Information til spillere</div>
-          </a>
-        </div>
-        <div class="col-lg-4">
-          <a
-            id="info-paaroerende"
-            href="https://www.spillemyndigheden.dk/paaroerende"
-            target="_blank"
-            class="solid-box"
-          >
-            <h2>Kender du en spiller, som du er bekymret for?</h2>
-            <p>Du kan støtte din pårørende på forskellige måder</p>
-            <div class="rofus-button">Information til pårørende</div>
-          </a>
-        </div>
-
-        <div class="col-lg-4">
-          <a
-            id="info-fagpersoner"
-            href="https://www.spillemyndigheden.dk/fagperson"
-            target="_blank"
-            class="solid-box"
-          >
-            <h2>Arbejder du med en borger, der har et spilproblem?</h2>
-            <p>Få gode råd til, hvordan du kan hjælpe</p>
-            <div class="rofus-button">Information til fagpersoner</div>
-          </a>
-        </div>
-      </div>
-    </div>
+    <Hero />
+    <SectionInfo />
+    <SectionBoxes />
+    <SectionQuiz />
+    <SectionBand />
+    <Footer />
+    <!-- <Basechat /> -->
   </body>
-
-  <div id="test-dig-selv" class="cotainer-fluid quiz">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3"></div>
-
-        <div class="col-lg-6">
-          <div id="embedded-react-app"></div>
-        </div>
-        <div class="col-lg-3"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container-fluid section-2">
-    <div class="row">
-      <div class="col-lg-6 rofus">
-        <div class="align">
-          <h2>Vil du udelukkes fra spil?</h2>
-          <p>
-            Udeluk dig selv fra onlinespil og kasinoer i Spillemyndighedens
-            Register Over Frivilligt Udelukkede Spillere (ROFUS). Nemt og
-            fortroligt med NemID/MitID.
-          </p>
-          <a href="https://www.rofus.nu/" class="btn btn-primary"
-            >Læs mere på rofus.nu</a
-          >
-        </div>
-      </div>
-
-      <div class="col-lg-6 behandling">
-        <div class="align">
-          <h2>Gratis behandling af spilafhængighed<br />(ludomani)</h2>
-          <p>Se en oversigt over statsstøttede behandlingstilbud.</p>
-          <a
-            href="https://www.spillemyndigheden.dk/behandlingssteder"
-            class="btn btn-primary">Find gratis behandling</a
-          >
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container-fluid footer">
-    <div class="container">
-      <div class="col-lg-12">
-        <ul>
-          <li>Spillemyndigheden</li>
-          <li>Englandsgade 25, 6. sal</li>
-          <li>5000 Odense C</li>
-          <li>mail@spillemyndigheden.dk</li>
-          <li>CVR: 34730415</li>
-        </ul>
-        <p>
-          <a href="https://www.was.digst.dk/stopspillet-dk" target="_blank"
-            >Tilgængelighedserklæring</a
-          >&nbsp;&nbsp;&nbsp;
-          <a
-            href="https://www.spillemyndigheden.dk/privatlivspolitik"
-            target="_blank">Privatlivspolitik</a
-          >&nbsp;&nbsp;&nbsp;
-          <a href="cookie-policy.html">Cookiepolitik</a>
-        </p>
-        <p>&nbsp;</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="basechat_fixed" id="basechat_fixed" style="display: block;">
-    <div id="basechat_mainContainer" class="basechat_mainContainer">
-      <div
-        class="basechat_general_fixed basechat_chatClosed"
-        id="basechat_chatClosed"
-        onclick="basechat_fixedElementClick()"
-        style="display: none;"
-      >
-        <div class="basechat_fixed_circle basechat_fixed_circle_red"></div>
-        <div class="basechat_ChatClosedText1">Chatrådgivning</div>
-        <div id="basechat_ChatClosedText2" class="basechat_ChatClosedText2">
-          Åben i dag 12-15
-        </div>
-      </div>
-      <div
-        class="basechat_general_fixed basechat_chatOpen"
-        id="basechat_chatOpen"
-        onclick="basechat_fixedElementClick()"
-        style=""
-      >
-        <div class="basechat_fixed_circle basechat_fixed_circle_green"></div>
-        <div class="basechat_ChatOpenText1">Chat med os</div>
-        <div class="basechat_ChatOpenText2"></div>
-      </div>
-    </div>
-    <iframe
-      src="https://phs.basechat.com/aspxIM/chat-contact.aspx?winid=504730131976"
-      class="basechat_iframe"></iframe>
-  </div>
 </html>
 
 <script src="/js/bootstrap.min.js" is:inline></script>
