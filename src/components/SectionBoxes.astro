@@ -1,41 +1,52 @@
-<div class="container section-1">
-  <div class="row solid-box-container">
-    <div class="col-lg-4">
-      <a
-        id="info-spillere"
-        href="https://www.spillemyndigheden.dk/spiller"
-        target="_blank"
-        class="solid-box"
-      >
-        <h2>Spiller du for meget?</h2>
-        <p>Lær at genkende de typiske tegn på ludomani</p>
-        <div class="rofus-button">Information til spillere</div>
-      </a>
-    </div>
-    <div class="col-lg-4">
-      <a
-        id="info-paaroerende"
-        href="https://www.spillemyndigheden.dk/paaroerende"
-        target="_blank"
-        class="solid-box"
-      >
-        <h2>Kender du en spiller, som du er bekymret for?</h2>
-        <p>Du kan støtte din pårørende på forskellige måder</p>
-        <div class="rofus-button">Information til pårørende</div>
-      </a>
-    </div>
+---
+interface Box {
+  id: string;
+  title: string;
+  description: string;
+  href: string;
+  hrefTitle: string;
+}
 
-    <div class="col-lg-4">
+const data: Box[] = [
+  {
+    id: "info-spillere",
+    title: "Spiller du for meget?",
+    description: "Lær at genkende de typiske tegn på ludomani",
+    href: "https://www.spillemyndigheden.dk/spiller",
+    hrefTitle: "Information til spillere",
+  },
+  {
+    id: "info-paaroerende",
+    title: "Kender du en spiller, som du er bekymret for?",
+    description: "Du kan støtte din pårørende på forskellige måder",
+    href: "https://www.spillemyndigheden.dk/paaroerende",
+    hrefTitle: "Information til pårørende",
+  },
+  {
+    id: "info-fagpersoner",
+    title: "Arbejder du med en borger, der har et spilproblem?",
+    description: "Få gode råd til, hvordan du kan hjælpe",
+    href: "https://www.spillemyndigheden.dk/fagperson",
+    hrefTitle: "Information til fagpersoner",
+  },
+];
+---
+
+<section class="container mx-auto grid lg:grid-cols-3 gap-10 my-10">
+  {
+    data.map(({ id, title, description, href, hrefTitle }) => (
       <a
-        id="info-fagpersoner"
-        href="https://www.spillemyndigheden.dk/fagperson"
+        id={id}
+        href={href}
         target="_blank"
-        class="solid-box"
+        class="flex flex-col bg-primary text-white text-center p-5 gap-y-3"
       >
-        <h2>Arbejder du med en borger, der har et spilproblem?</h2>
-        <p>Få gode råd til, hvordan du kan hjælpe</p>
-        <div class="rofus-button">Information til fagpersoner</div>
+        <h2 class="text-2xl uppercase font-bold leading-none">{title}</h2>
+        <p class="flex-1">{description}</p>
+        <div class="border border-white rounded py-1.5 px-2 hover:bg-light hover:border-light hover:text-primary transition-all mt-5">
+          {hrefTitle}
+        </div>
       </a>
-    </div>
-  </div>
-</div>
+    ))
+  }
+</section>

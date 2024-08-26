@@ -47,3 +47,11 @@
   font-weight: 300;
   font-style: normal;
 }
+
+body {
+  @apply text-primary;
+}
+
+p {
+  @apply font-light;
+}

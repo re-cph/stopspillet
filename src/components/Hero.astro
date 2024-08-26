@@ -1,60 +1,6 @@
-<div class="frontpageHero">
-  <div class="frontpageHero-wrapper">
-    <div class="frontpageHero-content">
-      <img
-        src="svg/logo.svg"
-        alt="StopSpillet logo"
-        class="frontpageHero-logo"
-      />
-      <h1 class="frontpageHero-title">
-        Hvis du ikke kan sige det højt, kan du sige det til os
-      </h1>
-
-      <div class="openingHoursContainer">
-        <div class="openingHours" id="openingHoursChat">
-          <div class="openingHours-box">
-            <div class="openingHours-icon">
-              <img src="/images/openingHours_chat.png" />
-            </div>
-            <div class="openingHours-content">
-              <div class="openingHours-topLine"></div>
-              <div class="openingHours-bottomLine"></div>
-            </div>
-          </div>
-          <iframe
-            height="60"
-            class="openingHours-action"
-            src="https://phs.basechat.com/aspxIM/chat-contact.aspx?winid=430721183264"
-          ></iframe>
-        </div>
-
-        <div class="openingHours" id="openingHoursPhone">
-          <div class="openingHours-box">
-            <div class="openingHours-icon">
-              <img src="/images/openingHours_phone.png" />
-            </div>
-            <div class="openingHours-content">
-              <div class="openingHours-topLine"></div>
-              <div class="openingHours-bottomLine"></div>
-            </div>
-          </div>
-          <a
-            href="tel:70222825"
-            class="btn btn-primary openingHours-hidden openingHours-action"
-            >Ring 70 22 28 25</a
-          >
-        </div>
-      </div>
-
-      <div class="arrow bounce">
-        <a title="Scroll ned" class="fa fa-arrow-down fa-2x" href="#content"
-        ></a>
-      </div>
-    </div>
-  </div>
-
+<header class="h-screen relative flex justify-center items-center">
   <video
-    class="frontpageHero-video"
+    class="absolute inset-0 w-full h-full object-cover"
     title="Her afspilles en reklamefilm uden lyd. Filmen fungerer som baggrund, og formidler derfor ikke noget indhold."
     poster="/images/frontpage-stopspillet2023-cover.jpg"
     autoplay
@@ -63,6 +9,54 @@
   >
     <source type="video/mp4" src="/video/frontpage-stopspillet2023.mp4" />
   </video>
-  Her afspilles en reklamefilm uden lyd. Filmen fungerer som baggrund, og formidler
-  derfor ikke noget indhold.
-</div>
+
+  <div class="bg-accent relative flex flex-col items-center">
+    <img src="/svg/logo.svg" alt="StopSpillet logo" class="w-[320px]" />
+    <h1
+      class="text-[64px] py-14 font-extrabold max-w-[600px] leading-none text-center text-white"
+    >
+      Hvis du ikke kan sige det højt, kan du sige det til os
+    </h1>
+
+    <div class="openingHoursContainer">
+      <div class="openingHours" id="openingHoursChat">
+        <div class="openingHours-box">
+          <div class="openingHours-icon">
+            <img src="/images/openingHours_chat.png" />
+          </div>
+          <div class="openingHours-content">
+            <div class="openingHours-topLine"></div>
+            <div class="openingHours-bottomLine"></div>
+          </div>
+        </div>
+        <iframe
+          height="60"
+          class="openingHours-action"
+          src="https://phs.basechat.com/aspxIM/chat-contact.aspx?winid=430721183264"
+        ></iframe>
+      </div>
+
+      <div class="openingHours" id="openingHoursPhone">
+        <div class="openingHours-box">
+          <div class="openingHours-icon">
+            <img src="/images/openingHours_phone.png" />
+          </div>
+          <div class="openingHours-content">
+            <div class="openingHours-topLine"></div>
+            <div class="openingHours-bottomLine"></div>
+          </div>
+        </div>
+        <a
+          href="tel:70222825"
+          class="btn btn-primary openingHours-hidden openingHours-action"
+          >Ring 70 22 28 25</a
+        >
+      </div>
+
+      <div class="arrow bounce">
+        <a title="Scroll ned" class="fa fa-arrow-down fa-2x" href="#content"
+        ></a>
+      </div>
+    </div>
+  </div>
+</header>

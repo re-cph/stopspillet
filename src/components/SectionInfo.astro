@@ -1,25 +1,48 @@
-<div id="content">
-  <div class="container section-1">
-    <div class="row">
-      <div class="col-lg-8">
-        <h2>Hvad er StopSpillet?</h2>
-        <p>
-          StopSpillet er Spillemyndighedens hjælpelinje om spilafhængighed; i
-          daglig tale kaldet ludomani. StopSpillet er for alle, der har brug for
-          råd og vejledning om ansvarligt spil og spilafhængighed. Vores
-          rådgivere sidder klar til at tale med dig. Sammen finder I ud af,
-          hvilke muligheder du har, og hvordan du kommer videre.
-        </p>
-        <p>
-          <a
-            class="normal"
-            href="https://www.spillemyndigheden.dk/stopspillet-hjaelpelinje-om-spilafhaengighed-ludomani"
-            target="_blank"
-            >Læs mere om StopSpillet på www.spillemyndigheden.dk</a
-          >
-        </p>
-      </div>
-      <h2>Fortrolige samtaler om ludomani</h2>
+---
+interface OpeningHour {
+  title: string;
+  value: string;
+}
+
+const openingHoursChat: OpeningHour[] = [
+  { title: "Mandag", value: "17.00 - 21.00" },
+  { title: "Tirsdag", value: "17.00 - 21.00" },
+  { title: "Onsdag", value: "17.00 - 21.00" },
+  { title: "Torsdag", value: "17.00 - 21.00" },
+];
+
+const openingHoursPhone: OpeningHour[] = [
+  { title: "Mandag-torsdag", value: "9.00 - 21.00" },
+  { title: "Fredag", value: "9.00 - 17.00" },
+];
+---
+
+<section id="content" class="container mt-20 mb-10 grid lg:grid-cols-3 gap-10">
+  <div class="col-span-2 space-y-8">
+    <div class="space-y-4">
+      <h2 class="text-2xl uppercase font-bold leading-none">
+        Hvad er StopSpillet?
+      </h2>
+      <p>
+        StopSpillet er Spillemyndighedens hjælpelinje om spilafhængighed; i
+        daglig tale kaldet ludomani. StopSpillet er for alle, der har brug for
+        råd og vejledning om ansvarligt spil og spilafhængighed. Vores rådgivere
+        sidder klar til at tale med dig. Sammen finder I ud af, hvilke
+        muligheder du har, og hvordan du kommer videre.
+      </p>
+      <p>
+        <a
+          class="normal"
+          href="https://www.spillemyndigheden.dk/stopspillet-hjaelpelinje-om-spilafhaengighed-ludomani"
+          target="_blank">Læs mere om StopSpillet på www.spillemyndigheden.dk</a
+        >
+      </p>
+    </div>
+
+    <div class="space-y-4">
+      <h2 class="text-2xl uppercase font-bold leading-none">
+        Fortrolige samtaler om ludomani
+      </h2>
       <p>
         Når du kontakter StopSpillet er samtalen fortrolig mellem dig og
         rådgiveren. StopSpillets rådgivere er professionelle og uddannede til at
@@ -28,54 +51,52 @@
         myndigheder.
       </p>
     </div>
-    <div class="col-lg-4">
-      <h2>Tal med os</h2>
-      <p class="bold">Hos StopSpillet kan du få:</p>
-      <ul>
-        <li>Professionel og uvildig rådgivning om ansvarligt spil</li>
-        <li>Afklaring af problematisk spiladfærd</li>
-        <li>Vejledning om behandlingsmuligheder</li>
-      </ul>
+  </div>
 
-      <p class="bold">Vi er klar til at chatte med dig</p>
-      <table>
-        <tr>
-          <td style="width: 100px;">Mandag</td>
-          <td style="width: 100px; text-align: right;">17.00 - 21.00</td>
-        </tr>
-        <tr>
-          <td style="width: 100px;">Tirsdag</td>
-          <td style="width: 100px; text-align: right;">17.00 - 21.00</td>
-        </tr>
-        <tr>
-          <td style="width: 100px;">Onsdag</td>
-          <td style="width: 100px; text-align: right;">17.00 - 21.00</td>
-        </tr>
-        <tr>
-          <td style="width: 100px;">Torsdag</td>
-          <td style="width: 100px; text-align: right;">17.00 - 21.00</td>
-        </tr>
-      </table>
+  <div class="col-span-1 space-y-4">
+    <h2 class="text-2xl uppercase font-bold leading-none">Tal med os</h2>
 
-      <p class="bold">Vi er klar til at tale med dig</p>
-      <table>
-        <tr>
-          <td style="width: 100px;">Mandag-torsdag</td>
-          <td style="width: 100px; text-align: right;">9.00 - 21.00</td>
-        </tr>
-        <tr>
-          <td style="width: 100px;">Fredag</td>
-          <td style="width: 100px; text-align: right;">9.00 - 17.00</td>
-        </tr>
-      </table>
+    <p class="font-bold">Hos StopSpillet kan du få:</p>
+    <ul class="list-square font-light pl-4">
+      <li>Professionel og uvildig rådgivning om ansvarligt spil</li>
+      <li>Afklaring af problematisk spiladfærd</li>
+      <li>Vejledning om behandlingsmuligheder</li>
+    </ul>
 
-      <p>Telefonnummeret er:</p>
-      <a href="tel:70222825"><h2 class="number">70 22 28 25</h2></a>
+    <p class="font-bold">Vi er klar til at chatte med dig</p>
+    <ul>
+      {
+        openingHoursChat.map(({ title, value }) => (
+          <li class="flex justify-between leading-none max-w-[200px]">
+            <p>{title}</p>
+            <p>{value}</p>
+          </li>
+        ))
+      }
+    </ul>
 
-      <div id="holidays">
-        <p class="bold holidays-title" style="padding-bottom: 0;"></p>
-        <p style="padding-top: 0;" class="holidays-excerpt"></p>
-      </div>
+    <p class="font-bold">Vi er klar til at tale med dig</p>
+    <ul>
+      {
+        openingHoursPhone.map(({ title, value }) => (
+          <li class="flex justify-between leading-none max-w-[200px]">
+            <p>{title}</p>
+            <p>{value}</p>
+          </li>
+        ))
+      }
+    </ul>
+
+    <p>Telefonnummeret er:</p>
+    <a href="tel:70222825">
+      <h2 class="text-2xl uppercase font-bold leading-none pt-2">
+        70 22 28 25
+      </h2>
+    </a>
+
+    <div id="holidays">
+      <p class="bold holidays-title" style="padding-bottom: 0;"></p>
+      <p style="padding-top: 0;" class="holidays-excerpt"></p>
     </div>
   </div>
-</div>
+</section>

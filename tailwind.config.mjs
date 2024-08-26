@@ -1,12 +1,16 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
+console.log(defaultTheme.screens);
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     screens: {
-      md: "660px",
-      lg: "1020px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
     },
     colors: {
       white: "#FFF",
@@ -25,6 +29,10 @@ export default {
       padding: {
         DEFAULT: "20px",
       },
+    },
+    listStyleType: {
+      decimal: "decimal",
+      square: "square",
     },
     extend: {
       fontFamily: {
