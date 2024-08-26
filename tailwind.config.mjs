@@ -11,11 +11,14 @@ export default {
     colors: {
       white: "#FFF",
       black: "#000",
-      primary: "#14143c",
-      secondary: "#6a7a90",
-      accent: "#96b4dc",
-      bgFooter: "#5d6673",
-      bgNews: "#E9E5E2",
+      primary: "#13113a",
+      light: "#96b4dc",
+      lightAlt: "#9abde9",
+      accent: "#ef7535",
+      accentAlt: "#EC6C27",
+      shuttleGray: "#5d6673",
+      slateGray: "#6a7a90",
+      boulder: "#757575",
     },
     container: {
       center: true,
@@ -25,32 +28,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['"Open Sans"', ...defaultTheme.fontFamily.sans],
-        heading: ['"Noto Sans"', ...defaultTheme.fontFamily.sans],
+        sans: ['"Republic"', ...defaultTheme.fontFamily.sans],
       },
-    },
-    keyframes: {
-      heroBgScale: {
-        "0%": {
-          "transform-origin": "bottom left",
-          transform: "scale(1)",
-        },
-        "100%": {
-          transform: "scale(1.2)",
-        },
-      },
-      logoSlider: {
-        from: {
-          transform: "translateX(-196px)",
-        },
-        to: {
-          transform: "translateX(0)",
-        },
-      },
-    },
-    animation: {
-      heroBgScale: "heroBgScale 4s linear forwards",
-      logoSlider: "logoSlider 1s 3s ease-in-out forwards",
     },
   },
   plugins: [require("@tailwindcss/typography")],
