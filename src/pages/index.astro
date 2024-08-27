@@ -1,5 +1,6 @@
 ---
 import "../base.css";
+import Basechat from "../components/Basechat.astro";
 import Footer from "../components/Footer.astro";
 import Hero from "../components/Hero.astro";
 import SectionBand from "../components/SectionBand.astro";
@@ -26,7 +27,7 @@ import SectionQuiz from "../components/SectionQuiz.astro";
       content="Hos StopSpillet får du: Professionel, uvildig rådgivning om ansvarligt spil og ludomani; Afklaring af problematisk spiladfærd; Vejledning om behandling."
     />
     <link rel="shortcut icon" type="image/png" href="img/icon_crown.png" />
-    <script>
+    <script is:inline>
       window.cookieconsent_options = {
         message:
           "<h4>Brug af cookies</h4>\nPå stopspillet.dk bruger vi cookies til at samle statistik, så vi kan forbedre din oplevelse på sitet. Du accepterer, når du klikker dig videre. ",
@@ -52,6 +53,6 @@ import SectionQuiz from "../components/SectionQuiz.astro";
     <SectionQuiz />
     <SectionBand />
     <Footer />
-    <!-- <Basechat /> -->
+    <Basechat />
   </body>
 </html>
