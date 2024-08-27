@@ -1,4 +1,6 @@
 ---
+import { HolidayMessage } from "./HolidayMessage";
+
 interface OpeningHour {
   title: string;
   value: string;
@@ -94,9 +96,6 @@ const openingHoursPhone: OpeningHour[] = [
       </h2>
     </a>
 
-    <div id="holidays">
-      <p class="bold holidays-title" style="padding-bottom: 0;"></p>
-      <p style="padding-top: 0;" class="holidays-excerpt"></p>
-    </div>
+    <HolidayMessage client:load />
   </div>
 </section>
