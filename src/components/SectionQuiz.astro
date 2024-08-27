@@ -1,12 +1,14 @@
-<div id="test-dig-selv" class="cotainer-fluid quiz">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-3"></div>
+---
+import { Quiz } from "./Quiz";
+---
 
-      <div class="col-lg-6">
-        <div id="embedded-react-app"></div>
-      </div>
-      <div class="col-lg-3"></div>
-    </div>
+<div class="bg-primary py-10 text-white text-center">
+  <div class="mx-auto max-w-lg">
+    <h2 class="text-5xl font-bold">TEST DIG SELV</h2>
+    <p class="text-2xl font-light my-6">
+      Har du et problematisk forhold til spil? Tag en test med 9 spørgsmål om
+      dine spilvaner.
+    </p>
+    <Quiz client:visible />
   </div>
 </div>
