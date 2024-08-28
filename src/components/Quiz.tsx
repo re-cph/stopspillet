@@ -203,7 +203,7 @@ export function Quiz() {
           <div className="flex items-center justify-between max-w-xs mx-auto">
             <button
               onClick={() => reverse()}
-              className="bg-boulder text-white uppercase font-bold py-1.5  px-2 rounded hover:brightness-110 transition-all disabled:opacity-20"
+              className="bg-boulder text-white uppercase font-bold py-1.5  px-2 rounded hover:brightness-110 transition-all disabled:opacity-0"
               disabled={index <= 0}
             >
               Tilbage

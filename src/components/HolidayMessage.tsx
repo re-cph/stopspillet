@@ -77,7 +77,7 @@ export function HolidayMessage() {
   if (!activeHoliday) return;
 
   return (
-    <div>
+    <div className="mt-4">
       <p className="font-bold">{activeHoliday.title}</p>
       <p>{activeHoliday.excerpt}</p>
     </div>

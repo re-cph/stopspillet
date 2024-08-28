@@ -34,7 +34,7 @@ const openingHoursPhone: OpeningHour[] = [
       </p>
       <p>
         <a
-          class="normal"
+          class="underline hover:no-underline"
           href="https://www.spillemyndigheden.dk/stopspillet-hjaelpelinje-om-spilafhaengighed-ludomani"
           target="_blank">Læs mere om StopSpillet på www.spillemyndigheden.dk</a
         >
@@ -55,21 +55,21 @@ const openingHoursPhone: OpeningHour[] = [
     </div>
   </div>
 
-  <div class="col-span-1 space-y-4">
+  <div class="col-span-1">
     <h2 class="text-2xl uppercase font-bold leading-none">Tal med os</h2>
 
-    <p class="font-bold">Hos StopSpillet kan du få:</p>
+    <h3 class="font-semibold mt-4">Hos StopSpillet kan du få:</h3>
     <ul class="list-square font-light pl-4">
       <li>Professionel og uvildig rådgivning om ansvarligt spil</li>
       <li>Afklaring af problematisk spiladfærd</li>
       <li>Vejledning om behandlingsmuligheder</li>
     </ul>
 
-    <p class="font-bold">Vi er klar til at chatte med dig</p>
+    <h3 class="font-semibold mt-4">Vi er klar til at chatte med dig</h3>
     <ul>
       {
         openingHoursChat.map(({ title, value }) => (
-          <li class="flex justify-between leading-none max-w-[200px]">
+          <li class="flex justify-between leading-tight max-w-[200px]">
             <p>{title}</p>
             <p>{value}</p>
           </li>
@@ -77,11 +77,11 @@ const openingHoursPhone: OpeningHour[] = [
       }
     </ul>
 
-    <p class="font-bold">Vi er klar til at tale med dig</p>
+    <h3 class="font-semibold mt-4">Vi er klar til at tale med dig</h3>
     <ul>
       {
         openingHoursPhone.map(({ title, value }) => (
-          <li class="flex justify-between leading-none max-w-[200px]">
+          <li class="flex justify-between leading-tight max-w-[200px]">
             <p>{title}</p>
             <p>{value}</p>
           </li>
@@ -89,13 +89,13 @@ const openingHoursPhone: OpeningHour[] = [
       }
     </ul>
 
-    <p>Telefonnummeret er:</p>
+    <p class="mt-4">Telefonnummeret er:</p>
     <a href="tel:70222825">
       <h2 class="text-2xl uppercase font-bold leading-none pt-2">
         70 22 28 25
       </h2>
     </a>
 
-    <HolidayMessage client:load />
+    <HolidayMessage client:visible />
   </div>
 </section>
