@@ -438,7 +438,7 @@ export function OpeningHours({
   return (
     <div className={clsx("space-y-2.5", className)}>
       <div className="bg-black/30 grid p-4 gap-x-4 gap-y-2.5 text-white rounded">
-        <img src={getIcon(mode)} className="w-8 h-8 row-span-2" />
+        <img src={getIcon(mode)} className="w-8 h-8 row-span-2" alt="" />
         <div
           className={clsx(
             "col-start-2",
