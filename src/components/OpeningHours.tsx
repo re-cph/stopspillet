@@ -153,6 +153,7 @@ const OPENING_HOURS_CONFIG_CHAT: OpeningHoursConfig = {
       height="60"
       src="https://phs.basechat.com/aspxIM/chat-contact.aspx?winid=430721183264"
       className="w-full"
+      aria-label="Knap til chat"
     />
   ),
 };
