@@ -40,6 +40,18 @@ import Basechat from "../components/Basechat.astro";
         target: "_blank",
       };
     </script>
+
+    <script>
+      if (location.hash) {
+        const target = document.querySelector(location.hash);
+        if (target) {
+          requestAnimationFrame(() =>
+            target.scrollIntoView({ behavior: "smooth" }),
+          );
+        }
+      }
+    </script>
+
     <script
       src=""
       data-category-consent="cookie_cat_statistic"
