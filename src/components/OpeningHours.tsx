@@ -3,11 +3,9 @@ import {
   dayInMinutes,
   diffInDays,
   getDateString,
-  getOpeningDayText,
+  getDayDiffInText,
   prependZero,
-  removedPrefixedZero,
 } from "../utils";
-import type { ReactNode } from "react";
 
 type Mode = "chat" | "phone";
 
@@ -87,8 +85,15 @@ const HOLIDAYS = [
   "2024-05-09",
   "2024-05-20",
   "2024-06-05",
+  "2024-12-24",
   "2024-12-25",
   "2024-12-26",
+  "2024-12-27",
+  "2024-12-28",
+  "2024-12-29",
+  "2024-12-30",
+  "2024-12-31",
+  "2025-01-01",
 ];
 
 /* HOW STUFF WORKS
@@ -396,24 +401,10 @@ const useOpeningHours = (
       action: config.action,
     };
   } else {
-    let openingText = getOpeningDayText(
-      tempDate.getDay(),
-      nextOpenHours.open.day,
-      false,
-    );
+    let openingText = getDayDiffInText(nextOpenHours.diff, nextOpenHours.date);
 
     const openingHours = nextOpenHours.open.hours.toString();
     const openingMinutes = nextOpenHours.open.minutes.toString();
-
-    if (nextOpenHours.diff > 7) {
-      const openingDateElements = nextOpenHours.date.split("-");
-      openingText +=
-        " d. " +
-        removedPrefixedZero(openingDateElements[2]) +
-        "/" +
-        removedPrefixedZero(openingDateElements[1]) +
-        ",";
-    }
 
     openingText +=
       " kl. " + [openingHours, prependZero(openingMinutes)].join(":");

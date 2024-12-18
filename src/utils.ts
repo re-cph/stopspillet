@@ -18,34 +18,25 @@ export function diffInDays(future: Date): number {
   return parseInt(Result.toFixed(0));
 }
 
-export function getOpeningDayText(
-  today: number,
-  next: number,
-  skipToday: boolean,
-) {
-  if (today === next && !skipToday) {
+export function getDayDiffInText(diff: number, date: string) {
+  if (diff === 0) {
     return "i dag";
-  } else if (today + 1 === next || (next === 6 && today === 0)) {
-    return "i morgen";
-  } else {
-    switch (next) {
-      case 1:
-        return "mandag";
-      case 2:
-        return "tirsdag";
-      case 3:
-        return "onsdag";
-      case 4:
-        return "torsdag";
-      case 5:
-        return "fredag";
-      case 6:
-        return "lørdag";
-      case 0:
-      default:
-        return "søndag";
-    }
   }
+  if (diff === 1) {
+    return "i morgen";
+  }
+
+  const formatter = new Intl.DateTimeFormat(
+    "da-DK",
+    diff < 7
+      ? { weekday: "long" }
+      : {
+          month: "short",
+          day: "numeric",
+        },
+  );
+
+  return formatter.format(new Date(date));
 }
 
 export function dayInMinutes(
