@@ -130,6 +130,10 @@ const OPENING_HOURS_CONFIG_CHAT: OpeningHoursConfig = {
       open: { day: 4, hours: 17, minutes: 0 },
       close: { day: 4, hours: 21, minutes: 0 },
     },
+    {
+      open: { day: 5, hours: 14, minutes: 0 },
+      close: { day: 5, hours: 17, minutes: 0 },
+    },
     // Specific dates
     {
       open: { date: "2022-12-27", hours: 17, minutes: 0 },
