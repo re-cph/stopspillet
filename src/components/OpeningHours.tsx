@@ -61,39 +61,18 @@ type OpeningHourInterrim =
  */
 
 const HOLIDAYS = [
-  "2022-06-06",
-  "2022-12-26",
-  "2023-04-06",
-  "2023-04-07",
-  "2023-04-10",
-  "2023-05-05",
-  "2023-05-18",
-  "2023-05-29",
-  "2023-12-24",
-  "2023-12-25",
-  "2023-12-26",
-  "2023-12-27",
-  "2023-12-28",
-  "2023-12-29",
-  "2023-12-30",
-  "2023-12-31",
-  "2024-01-01",
-  "2024-03-28",
-  "2024-03-29",
-  "2024-04-01",
-  "2024-04-26",
-  "2024-05-09",
-  "2024-05-20",
-  "2024-06-05",
-  "2024-12-24",
-  "2024-12-25",
-  "2024-12-26",
-  "2024-12-27",
-  "2024-12-28",
-  "2024-12-29",
-  "2024-12-30",
-  "2024-12-31",
   "2025-01-01",
+  "2025-04-13",
+  "2025-04-17",
+  "2025-04-18",
+  "2025-04-20",
+  "2025-04-21",
+  "2025-05-29",
+  "2025-05-30",
+  "2025-06-08",
+  "2025-06-09",
+  "2025-12-25",
+  "2025-12-26",
 ];
 
 /* HOW STUFF WORKS
@@ -134,23 +113,6 @@ const OPENING_HOURS_CONFIG_CHAT: OpeningHoursConfig = {
       open: { day: 5, hours: 14, minutes: 0 },
       close: { day: 5, hours: 17, minutes: 0 },
     },
-    // Specific dates
-    {
-      open: { date: "2022-12-27", hours: 17, minutes: 0 },
-      close: { date: "2022-12-27", hours: 21, minutes: 0 },
-    },
-    {
-      open: { date: "2022-12-29", hours: 9, minutes: 0 },
-      close: { date: "2022-12-29", hours: 15, minutes: 0 },
-    },
-    {
-      open: { date: "2022-12-29", hours: 17, minutes: 0 },
-      close: { date: "2022-12-29", hours: 21, minutes: 0 },
-    },
-    {
-      open: { date: "2022-12-30", hours: 9, minutes: 0 },
-      close: { date: "2022-12-30", hours: 14, minutes: 0 },
-    },
   ],
   holidays: HOLIDAYS,
   openTopText: "Vores chat er åben",
@@ -188,23 +150,6 @@ const OPENING_HOURS_CONFIG_PHONE: OpeningHoursConfig = {
     {
       open: { day: 5, hours: 9, minutes: 0 },
       close: { day: 5, hours: 17, minutes: 0 },
-    },
-    // Specific dates
-    {
-      open: { date: "2022-12-27", hours: 9, minutes: 0 },
-      close: { date: "2022-12-27", hours: 21, minutes: 0 },
-    },
-    {
-      open: { date: "2022-12-28", hours: 9, minutes: 0 },
-      close: { date: "2022-12-28", hours: 21, minutes: 0 },
-    },
-    {
-      open: { date: "2022-12-29", hours: 9, minutes: 0 },
-      close: { date: "2022-12-29", hours: 21, minutes: 0 },
-    },
-    {
-      open: { date: "2022-12-30", hours: 9, minutes: 0 },
-      close: { date: "2022-12-30", hours: 17, minutes: 0 },
     },
   ],
   holidays: HOLIDAYS,
