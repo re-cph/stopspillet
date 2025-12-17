@@ -27,6 +27,13 @@ const HOLIDAYS: Holiday[] = [
     excerpt:
       "Telefonen og chatten holder lukket fra 29. maj til og med 30. maj.",
   },
+  {
+    startDate: "2025-12-18",
+    endDate: "2026-01-01",
+    title: "NB: Jul og nytår",
+    excerpt:
+      "Telefonen og chatten holder lukket fra og med den 24. december til og med den 1. januar.",
+  },
 ];
 
 const useHoliday = () => {
