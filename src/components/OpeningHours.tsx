@@ -104,10 +104,10 @@ const OPENING_HOURS_CONFIG_CHAT: OpeningHoursConfig = {
       open: { day: 1, hours: 17, minutes: 0 },
       close: { day: 1, hours: 21, minutes: 0 },
     },
-    // {
-    //   open: { day: 2, hours: 17, minutes: 0 },
-    //   close: { day: 2, hours: 21, minutes: 0 },
-    // },
+    {
+      open: { day: 2, hours: 17, minutes: 0 },
+      close: { day: 2, hours: 21, minutes: 0 },
+    },
     {
       open: { day: 3, hours: 17, minutes: 0 },
       close: { day: 3, hours: 21, minutes: 0 },
