@@ -52,7 +52,7 @@ import Basechat from "../components/Basechat.astro";
       }
     </script>
 
-    <script>
+    <script is:inline>
       window.addEventListener('CookieInformationConsentGiven', function(event) {
         if (CookieInformation.getConsentGivenFor('cookie_cat_statistic')) {
           (function(window, document, dataLayerName, id) {
