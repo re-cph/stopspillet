@@ -52,12 +52,18 @@ import Basechat from "../components/Basechat.astro";
       }
     </script>
 
-    <script
-      src=""
-      data-category-consent="cookie_cat_statistic"
-      data-consent-src="//assets.adobedtm.com/58ae824d9566/559d1c9e8419/launch-052159e4177b.min.js"
-      async
-      is:inline></script>
+    <script>
+      window.addEventListener('CookieInformationConsentGiven', function(event) {
+        if (CookieInformation.getConsentGivenFor('cookie_cat_statistic')) {
+          (function(window, document, dataLayerName, id) {
+            window[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new Date).getTime(),event:"stg.start"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');
+            var qP=[];dataLayerName!=="dataLayer"&&qP.push("data_layer_name="+dataLayerName);var qPString=qP.length>0?("?"+qP.join("&")):"";
+            tags.async=!0,tags.src="https://ufst.containers.piwik.pro/"+id+".js"+qPString,scripts.parentNode.insertBefore(tags,scripts);
+            !function(a,n,i){a[n]=a[n]||{};for(var c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var a=[].slice.call(arguments,0);"string"==typeof a[0]&&window[dataLayerName].push({event:n+"."+i+":"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,"ppms",["tm","cm"]);
+            })(window, document, 'dataLayer', 'b6c873e7-e495-4a9d-ade2-bbf41d23ae82');
+        }
+      }, false);
+    </script>
   </head>
 
   <body>
